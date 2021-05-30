@@ -1,0 +1,75 @@
+@using Microsoft.Data.Sqlite
+@model Product
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+<form method="POST" enctype="multipart/form-data">
+<input type="hidden" name="ProductId" value="@Model.ProductId"/>
+<div class="form-group">
+<label for="Name">Name</label>
+<input asp-for="Name" value="@Model.Name" class="form-control">
+</div>
+<div class="form-group">
+<label for="Price">Price</label>
+<input asp-for="Price" value="@Model.Price" class="form-control">
+</div>
+<div class="form-group">
+<label for="Description">Description</label>
+<textarea asp-for="Description" value="@Model.Description" class="form-control"></textarea>
+</div>
+<div class="form-group">
+<label for="ImageUrl">ImageUrl</label>
+<input asp-for="ImageUrl" value="@Model.ImageUrl" class="form-control" type="hidden">
+<img src="~/img/@Model.ImageUrl" width="80"/>
+<input type="file" name="file">
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+        </div>
+
+        <div class="col-md-4">
+            <h3>Ürünün Kategorileri</h3>
+             @foreach (var item in @ViewBag.procateg)
+                    {
+                        <a asp-controller="Product" asp-action="List" asp-route-id="@item.CategoryId" class="btn btn-warning">@item.Name</a>
+                        
+                    }
+
+            <br><br>
+            
+            <h2>Ürüne Eklemek İstediğiniz Kategoriyi Seçin</h2>
+            @foreach (var item in @ViewBag.Categories)
+            {
+               
+                   
+                     <form action="/admin/addproductcategory" method="POST">
+                    <input type="hidden" name="productId" value="@Model.ProductId"/>
+                    <input type="hidden" name="categoryId" value="@item.CategoryId"/>
+                    <div style="float: left; margin:2px;"><button type="submit" class="btn btn-primary">@item.Name</button></div>
+                    </form> 
+               
+            }
+
+            <br><br><br>
+            <h2>Üründen Çıkarmak İstediğiniz Kategoriyi Seçin</h2>
+            @foreach (var item in @ViewBag.Categories)
+            {
+                 <form action="/admin/categories/categorydelete" method="POST">
+                        <input type="hidden" name="productId" value="@Model.ProductId">
+                        <input type="hidden" name="categoryId" value="@item.CategoryId">
+                        <div style="float: left; margin:2px;"><button type="submit" class="btn btn-danger btn-sm">@item.Name</button></div>
+                    </form>   
+            }
+
+
+        </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+

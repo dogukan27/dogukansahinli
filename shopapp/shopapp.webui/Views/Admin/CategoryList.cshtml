@@ -1,0 +1,44 @@
+@model CategoryViewModel
+
+<h1>Admin Kategori Listeleme</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td></td>
+        </tr>
+    </thead>
+    @if (@Model.Categories.Count()>0)
+    {
+        <tbody>
+        @foreach (var item in @Model.Categories)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.Name</td>
+                <td style="width: 180px;"> 
+                    <a href="/admin/categories/edit/@item.CategoryId" class="btn btn-primary btn-sm mr-2">Edit</a>
+                    <a href="/admin/categories/delete/@item.CategoryId" class="btn btn-danger">Delete</a>
+                </td>     
+            </tr>
+        }
+
+        </tbody>
+    }
+    @if (@Model.Categories.Count()==0)
+    {
+        <div class="alert alert-danger">
+            <h3>ÜRÜN YOK</h3>
+        </div>
+    }
+    
+</table>
+        </div>
+    </div>
+</div>
+

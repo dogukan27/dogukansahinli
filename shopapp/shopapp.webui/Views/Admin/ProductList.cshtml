@@ -1,0 +1,65 @@
+@model ProductViewModel
+<h1>Admin Ürün Listeleme</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Image</td>
+            <td>Price</td>
+            <td>Onaylı</td>
+            <td>Anasayfa</td>
+            <td></td>
+        </tr>
+    </thead>
+    @if (@Model.Products.Count()>0)
+    {
+        <tbody>
+        @foreach (var item in @Model.Products)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.Name</td>
+                <td><img src="~/img/@item.ImageUrl" width="80px"></td>
+                <td>@item.Price</td>
+                <td>
+                    @if (@item.IsApproved)
+                    {
+                        <i class="far fa-check-circle"></i>
+                    }
+                    else
+                    {
+                        <i class="fas fa-times-circle"></i>
+                    }
+                    <a href="/admin/changesonay/@item.ProductId" class="btn btn-outline-dark btn-sm">Change</a>
+                </td>
+                <td>
+                     @if (@item.IsHome)
+                    {
+                        <i class="far fa-check-circle"></i>
+                    }
+                    else
+                    {
+                        <i class="fas fa-times-circle"></i>
+                    }
+                    <a href="/admin/changeshome/@item.ProductId" class="btn btn-outline-dark btn-sm">Change</a>
+
+                </td>
+                <td style="width: 180px;"> 
+                    <a href="/admin/edit/@item.ProductId" class="btn btn-primary btn-sm mr-2">Edit</a>
+                    <a href="/admin/delete/@item.ProductId" class="btn btn-danger">Delete</a>
+                </td>     
+            </tr>
+        }
+
+        </tbody>
+    }
+    @if (@Model.Products.Count()==0)
+    {
+        <div class="alert alert-danger">
+            <h3>ÜRÜN YOK</h3>
+        </div>
+    }
+    
+</table>

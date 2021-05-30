@@ -1,0 +1,41 @@
+@model Product
+
+@section Categories
+{
+    @await Component.InvokeAsync("Categories")
+}
+
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="row no-gutters">
+            <div class="col-md-3">
+                <img src="~/img/@Model.ImageUrl" class="card-img">
+            </div>
+            <div class="col-md-9">
+                    <h5 class="card-title">@Model.Name</h5>
+                    @foreach (var item in @ViewBag.procateg)
+                    {
+                        <a asp-controller="Product" asp-action="List" asp-route-id="@item.CategoryId" class="btn btn-warning">@item.Name</a>
+                    }
+                    <p class="card-text">@Model.Description</p>
+                    <h5 class="card-title">@Model.Price TL</h5>
+                    <p class="card-text">
+                        <small class="text-muted">3 days ago</small>
+                    </p>
+
+            <form method="POST" asp-action="AddToCart" asp-controller="Cart" class="form-inline">
+                <input type="hidden" name="productId" value="@Model.ProductId">
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" name="quantity" value="1" min="1" step="1" style="width: 100px;">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-cart-plus"></i>Sepete Ekle
+                        </button>     
+                    </div>
+                </div>
+            </form>
+            
+            </div>
+        </div>
+    </div>
+</div>

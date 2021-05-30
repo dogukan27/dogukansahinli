@@ -1,0 +1,34 @@
+@model Product
+
+@if (@Model.Name!=null)
+{
+    <div class="card mb-2">
+    <img class="card-img-top" src="~/img/@Model.ImageUrl" alt="">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Description</p>
+        <h3 class="card-title">@Model.Price TL</h3>
+        <a asp-controller="Product" asp-action="Details" asp-route-id="@Model.ProductId" class="btn btn-primary btn-sm">İncele</a>
+        <a asp-controller="Product" asp-action="Edit" asp-route-id="@Model.ProductId" class="btn btn-primary btn-sm">Edit</a>
+       
+       <form method="POST" action="/product/delete" style="display: inline;">
+            <input type="hidden" name="ProductId" value="@Model.ProductId">
+            <button type="submit"class="btn btn-danger btn-sm">Delete</button>
+        </form>
+
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <form method="POST" asp-action="AddToCart" asp-controller="Cart" style="display: inline;">
+                <input type="hidden" name="productId" value="@Model.ProductId">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="btn btn-success">Sepete Ekle</button>
+
+            </form>
+        }
+   
+   
+    </div>
+</div>      
+}
+

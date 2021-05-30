@@ -1,0 +1,85 @@
+<nav class="navbar bg-dark navbar-light navbar-expand-sm fixed-top">
+
+        <a href="/home/index" class="nav-brand">ShopApp</a>
+
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+			<ul class="navbar-nav" >
+                @if (User.IsInRole("admin"))
+                {
+                    <li class="nav-item">
+                        <a href="/product/list" class="nav-link" style="color: red;">Products</a>
+                    </li>
+				    <li class="nav-item">
+                        <a href="/product/create" class="nav-link" style="color: red;">Add Product</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a  href="/admin/productlist" class="nav-link" style="color: gold;">Admin Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  href="/admin/create" class="nav-link" style="color: gold;">Admin Add Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  href="/admin/categorylist" class="nav-link" style="color: gold;">Admin Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  href="/admin/categorycreate" class="nav-link" style="color: gold;">Admin Add Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/role/create" class="nav-link" style="color: gold;">Create Role</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/role/list" class="nav-link" style="color: gold;">Role List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/admin/user/list" class="nav-link" style="color: gold;">Users</a>
+                    </li>
+                }
+                @if(User.IsInRole("müşteri"))
+                {
+                    <li class="nav-item">
+                        <a href="/product/list" class="nav-link" style="color: red;">Products</a>
+                    </li>
+				    <li class="nav-item">
+                        <a href="/product/create" class="nav-link" style="color: red;">Add Product</a>
+                    </li>
+                }
+			</ul>
+
+            <ul class="navbar-nav ml-auto" >
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                    <a href="/cart/index" class="nav-link" style="color: pink;">Cart</a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a href="/account/logout" class="nav-link" style="color: pink;">Logout</a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a href="/account/manage" class="nav-link" style="color: pink;">@User.Identity.Name</a>
+                    </li>
+                        
+                }
+                else
+                {
+                    <li class="nav-item">
+                    <a href="/account/login" class="nav-link" style="color: darkred;">Login</a>
+                </li>
+				
+				 
+                 <li class="nav-item">
+                    <a  href="/account/register" class="nav-link" style="color: darkred;">Register</a>
+                </li>
+                }
+				
+			</ul>
+		</div>
+	</nav> 

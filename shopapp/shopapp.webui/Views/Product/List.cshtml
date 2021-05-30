@@ -1,0 +1,50 @@
+@model ProductViewModel
+
+@section Categories
+{
+    @await Component.InvokeAsync("Categories")
+}
+<div class="justify-content-end">
+            <form action="/product/search" class="form-inline">
+                <input name="q" type="text" class="form-control mr-2" placeholder="Search">
+                <button type="submit" class="btn btn-outline-dark mr-0">Search</button>
+            </form>
+            </div>
+
+@if(Model.Products.Count == 0)
+{
+    @await Html.PartialAsync("_noproduct")
+}
+else
+{
+    <div class="row">                  
+        @foreach (var product in Model.Products)
+        {    
+            <div class="col-md-4">
+                @await Html.PartialAsync("_product", product)   
+        </div>       
+        }   
+    </div>
+}
+@if (@ViewBag.sayfasayisi>0)
+{
+<div class="row">
+    <div class="column">
+        <nav aria-label="Page navigation example">
+  <ul class="pagination">
+   @for (int i = 1; i < @ViewBag.sayfasayisi+1; i++)
+   {
+       @if (@ViewBag.kategoriid==0)
+       {
+        <li class="page-item"><a class="page-link" href="/product/list?page=@i">@i</a></li>
+       }
+       else{
+           <li class="page-item"><a class="page-link" href="/product/list/@ViewBag.kategoriid?page=@i">@i</a></li>
+       }
+       
+   }
+  </ul>
+</nav>
+    </div>
+</div>
+}
