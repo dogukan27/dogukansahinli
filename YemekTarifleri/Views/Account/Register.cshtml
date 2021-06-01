@@ -1,0 +1,36 @@
+﻿@model YemekTarifleri.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label>UserName</label>
+        @Html.TextBoxFor(i => i.Username, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(i => i.Email, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        @Html.PasswordFor(i => i.Password, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>RePassword</label>
+        @Html.PasswordFor(i => i.RePassword, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-outline-secondary">Gönder</button>
+
+}
+

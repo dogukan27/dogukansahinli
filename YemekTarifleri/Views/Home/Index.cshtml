@@ -1,0 +1,27 @@
+﻿@model IEnumerable<YemekTarifleri.Models.Food>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row ">
+    @foreach (var item in Model)
+    {
+
+
+        <div class="col-md-4">
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">@item.FoodLocation</p>
+                    <h3 class="card-title">@item.Category.Name</h3>
+                    <p class="card-title">@item.Specification</p>
+
+                </div>
+            </div>
+
+        </div>
+
+    }
+
+</div>
+

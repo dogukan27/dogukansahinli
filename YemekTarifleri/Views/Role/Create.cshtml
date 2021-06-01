@@ -1,0 +1,25 @@
+﻿@model YemekTarifleri.Models.RoleModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Create</h2>
+
+
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm("Create", "Role", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label>UserName</label>
+        @Html.TextBoxFor(i => i.Name, new { @class = "form-control" })
+    </div>
+
+
+
+    <button type="submit" class="btn btn-outline-secondary">Kaydet</button>
+
+}
