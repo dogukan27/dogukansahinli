@@ -1,0 +1,1107 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE681EFA-5020-44E4-95CC-405AF2FDBA08}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tuning</RootNamespace>
+    <AssemblyName>tuning</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44385</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Backend-Challenge\db-calculator.sql" />
+    <Content Include="Backend-Challenge\Dökümantasyon\1.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\10.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\11.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\13.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\14.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\15.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\2.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\3.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\4.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\5.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\6.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\7.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\8.png" />
+    <Content Include="Backend-Challenge\Dökümantasyon\9.png" />
+    <Content Include="Backend-Challenge\FrontEnd\.idea\modules.xml" />
+    <Content Include="Backend-Challenge\FrontEnd\.idea\watcherTasks.xml" />
+    <Content Include="Backend-Challenge\FrontEnd\.idea\workspace.xml" />
+    <Content Include="Backend-Challenge\FrontEnd\about-us.html" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\1116px-Tata_logo.svg.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\1200px-Scion_logo.svg.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\1280px-Suzuki_logo_2.svg.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\17246-rolls-royce-logo-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\30518-Smart.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\6aa4e6968ca6068f35ab847b9a139159.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\Renault_logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\Saab_logo_2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\seat-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\Skoda_logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\SsangYong-Logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\Subaru-Logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\car-logo\toyota-logo-vector.png" />
+    <Content Include="Backend-Challenge\FrontEnd\chip-detaills.html" />
+    <Content Include="Backend-Challenge\FrontEnd\chip-tuning.html" />
+    <Content Include="Backend-Challenge\FrontEnd\contact.html" />
+    <Content Include="Backend-Challenge\FrontEnd\css\bootstrap.min.css" />
+    <Content Include="Backend-Challenge\FrontEnd\css\chart.css" />
+    <Content Include="Backend-Challenge\FrontEnd\css\font-awesome.min.css" />
+    <Content Include="Backend-Challenge\FrontEnd\css\responsive.css" />
+    <Content Include="Backend-Challenge\FrontEnd\css\style.css" />
+    <Content Include="Backend-Challenge\FrontEnd\faq.html" />
+    <Content Include="Backend-Challenge\FrontEnd\fonts\fontawesome-webfont3295.svg" />
+    <Content Include="Backend-Challenge\FrontEnd\human-resources.html" />
+    <Content Include="Backend-Challenge\FrontEnd\img\1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\111.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\ab-footer-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\about-car-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\about-hp.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\about\about-banner.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\admin\admin.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\b-feature-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\best-bike-dotted.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\bike-slider\bike-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\bike-slider\bike-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\bike-slider\bike-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\bike-blog\bike-blog-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\bike-blog\bike-blog-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\bike-blog\bike-blog-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\bike-blog\bike-blog-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\bike-blog\bike-blog-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\bike-blog\bike-blog-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\bike-blog\bike-blog-7.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\bike-blog\bike-blog-8.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\bike-blog\bike-blog-9.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\blog-grid\blog-grid-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\blog-grid\blog-grid-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\blog-grid\blog-grid-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\blog-grid\blog-grid-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\blog-grid\blog-grid-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\blog-grid\blog-grid-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\blog-grid\blog-grid-7.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\blog-grid\blog-grid-8.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\l-news\l-news-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\l-news\l-news-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\l-news\l-news-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\latest-bus\l-bus-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\latest-bus\l-bus-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\latest-bus\l-bus-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\latest-bus\l-bus-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\latest-bus\l-bus-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\latest-bus\l-bus-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\latest-car\l-car-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\latest-car\l-car-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\latest-car\l-car-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\main-blog\blog-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\main-blog\blog-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\main-blog\blog-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\main-blog\blog-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\main-blog\single-blog-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\taxi-latest-news\taxi-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\taxi-latest-news\taxi-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\taxi-latest-news\taxi-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\yacht-blog\blog-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\yacht-blog\blog-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\blog\yacht-blog\blog-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\boat\boat-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\boat\boat-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\boat\boat-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\boat\boat-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\boat\boat-5.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\boat\boat-6.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\boat\boat-title-shadow.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\boat\boat-title-shadow2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-10.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-11.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-12.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-5.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-6.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-7.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-8.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\brand-9.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\alfa-romeo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\alpina.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\aston-martin.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\audi.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\bentley.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\bmw.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\bugatti.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\cadillac.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\chevrolet.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\chrysler.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\citroen.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\dacia.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\dodge.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\ferrari.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\fiat.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\ford.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\honda.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\hyundai.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\infinity.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\isuzu.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\iveco.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\jaguar.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\jeep.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\karsan.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\kia.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\ktm.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\lamborghini.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\lancia.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\land-rover.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\lotus.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\maserati.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\mazda.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\mclaren.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\mercedes.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\mg.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\minicooper.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\mitshubishi.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\nissan.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\opel.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\pagani.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\peugeot.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\pgo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\piaggio.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\porsche.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\renault.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\rolls.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\saab.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\scion.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\seat.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\skoda.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\smart.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\ssang.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\subaru.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\suzuki.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\tata.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\toyota.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\volkswagen.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\expert-brand\volvo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\get-brand\brand-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\get-brand\brand-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\get-brand\brand-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\get-brand\brand-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\brand\get-brand\brand-5.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\breadcrumb\breadcrumb-bg-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\breadcrumb\breadcrumb-bg-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\breadcrumb\breadcrumb-bg-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\breadcrumb\breadcrumb-bg-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\breadcrumb\breadcrumb-bg-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\breadcrumb\breadcrumb-bg-7.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\breadcrumb\breadcrumb-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\bus-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\c-directly-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-company\audi.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-company\bmw.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-company\ferrari.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-company\honda.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-company\lamborghini.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-company\land.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-company\mercedes.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-company\nissan.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-company\porsche.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-company\toyota.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-feature-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-half-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-half.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-logo\audi.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car-logo\volkswagen.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car\car-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car\car-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car\car-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car\car-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car\car-5.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\car\car-6.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\chip-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\chip-logo2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\clasified-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\classic-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\classified-dotted-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\classified-f-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\alientech.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\byte.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\client-log-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\client-log-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\client-log-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\client-log-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\client-log-5.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\cmd.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\elnec.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\evc.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\fg.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\piasini.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\client-logo\race.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\comment\author-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\comment\comment-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\comment\comment-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\comment\comment-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\comparisom\compare-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\comparisom\compare-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\comparisom\compare-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\comparisom\compare-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\counter-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\counter-person.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\dealer-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\download-taxi.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\dubble-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\dubble-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\explore\explore-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\explore\explore-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\explore\explore-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\explore\explore-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\explore\explore-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\explore\explore-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\f-yacht-bg.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\favicon-green.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\favicon-red.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\favicon-taxi.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\favicon.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\feedback-bg-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\feedback-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\find-map-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\find-map.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\footer-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\footer-dotted-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\footer-dotted.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\footer-red-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\gallery-widget\gallery-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\gallery-widget\gallery-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\gallery-widget\gallery-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\gallery-widget\gallery-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\gallery-widget\gallery-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\gallery-widget\gallery-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\google-play-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\google-play.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\hashlogo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-banner\car-rental-banner.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\bike-name-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\budget-brand-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\budget-slider-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\budget-slider-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\budget-slider-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\bus-slider-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\bus-slider-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\byke-slider-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\byke-slider-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\byke-slider-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\byke-slider-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\luxuary-ele-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\luxuary-slider-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\luxuary-slider-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\luxuary-slider-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\repair-slider-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\repair-slider-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\repair-slider-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\slider-brand.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\slider-brand2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\slider-brand3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\taxi-slider-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\taxi-slider-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\tractor-slider-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\tractor-slider-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\tractor-slider-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\tractor-slider-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\truck-slider-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\truck-slider-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\truck-slider-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\yacht-slider-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\yacht-slider-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\home-slider\yacht-slider-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\human-resources.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\badge.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\bar-icon.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\border-gray.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\border.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\car-icon-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\car-insurance.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\card-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\card-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\card-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\card-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\card.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\choose-shap.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\clipboard.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\close-icon.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\dollar-coin.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\easy-br-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\easy-br-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\easy-bus-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\easy-bus-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\easy-bus-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\feedback-br.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\flag-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\flag-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\flag-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\flag.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\green.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\green.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\happy.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\headphones.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\leaf.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\luxuary-border-footer.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\luxuary-left-color-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\luxuary-left-color.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\luxuary-tyre-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\luxuary-tyre.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\map-marker-red.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\map-marker.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\marker-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\marker.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\menu-minus.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\menu-plus.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\p-cat-icon-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\p-cat-icon-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\p-cat-icon-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\p-cat-icon-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\paypal.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\pencil.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\s-marker-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\s-marker-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\s-marker-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\sec-br.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\slash.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\tachometer.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\taxi-object-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\taxi-object-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\taxi-object-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\taxi-object-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\team.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\tick.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\timer.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\turbo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\works-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\works-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\icon\works-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\included-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\l-f-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\left-br-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\loader_5.gif" />
+    <Content Include="Backend-Challenge\FrontEnd\img\logo-budget.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\logo-red.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\logo-tractor-green.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\logo-tractor.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\logo-yacht-f.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\logo-yacht.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\luxuary-car\luxuary-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\luxuary-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\luxuary-video.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\market-car-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\market-car-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu-white-bg.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu\menu-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu\menu-10.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu\menu-11.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu\menu-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu\menu-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu\menu-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu\menu-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu\menu-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu\menu-7.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu\menu-8.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\menu\menu-9.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\mobile-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\mobile-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\mobile-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\mobile-taxi-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\mobile-taxi-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\most-service-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\most-service-dotted.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\most-service-truck-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\most-service-truck.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\os-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\os.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\process-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\best-bike\best-bike-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\best-bike\best-bike-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\best-bike\best-bike-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bike-type\t-bike-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bike-type\t-bike-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bike-type\t-bike-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bike-type\t-bike-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bike-type\t-bike-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bike-type\t-bike-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-10.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-11.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-12.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-7.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-8.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\bus\bus-9.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-collection\car-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-collection\car-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-collection\car-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-collection\car-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-collection\car-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-collection\car-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-10.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-11.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-12.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-13.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-14.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-15.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-7.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-8.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-grid-four\car-9.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-product-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-product-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\car-product-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\cart-details\cart-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\cart-details\cart-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\cart-details\cart-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\cart-details\cart-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\cart-details\cart-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\comparisom\comparisom-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\comparisom\comparisom-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\comparisom\comparisom-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\list-product\l-product-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\list-product\l-product-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\list-product\l-product-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\list-product\l-product-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\list-product\l-product-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\list-product\l-product-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\list-product\l-product-7.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\list-product\l-product-8.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-details-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-details-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-details-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-details-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-details-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-tab-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-tab-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-tab-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-tab-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-tab-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-wd-img\p-wd-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-wd-img\p-wd-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-wd-img\p-wd-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-wd-img\p-wd-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-wd-img\p-wd-5.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\product-wd-img\p-wd-6.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\yacht\yacht-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\yacht\yacht-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\product\yacht\yacht-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\quickly-bg-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\quickly-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\repair-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\s-bus-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\service-banner.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\services\our-service\adblue-iptali.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\services\our-service\box-uygulamasi.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\services\our-service\chip-tuning.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\services\our-service\dpf-iptal.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\services\our-service\egr-iptal.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\services\our-service\hiz-limit-iptal.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\services\our-service\oil-chip.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\services\our-service\pedal-uygulaması.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\services\our-service\service-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\services\our-service\service-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\services\our-service\tork.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\shadow-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\signature.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\small-video.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\sss-banner.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\t-quickly-bg-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\t-quickly-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\takes.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\taxi-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\taxi-object-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\taxi-price.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\team\team-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\team\team-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\team\team-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\team\team-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\testimonials\testi-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\testimonials\testi-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\testimonials\testi-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\testimonials\testi-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\tractor-brand\brand-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\tractor-brand\brand-10.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\tractor-brand\brand-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\tractor-brand\brand-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\tractor-brand\brand-4.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\tractor-brand\brand-5.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\tractor-brand\brand-6.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\tractor-brand\brand-7.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\tractor-brand\brand-8.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\tractor-brand\brand-9.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\truck-bg-map.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\truck-blue-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\truck-check-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\truck-check-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\truck-check-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\truck-logo.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\truck-type\truck-1.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\truck-type\truck-2.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\truck-type\truck-3.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\truck-video.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\trusted-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\trusted-border.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\trusted-taxi.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\vehicle-tunning\audi-a3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\vehicle-tunning\audi-q7-chip.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\vehicle-tunning\bmw-520d.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\vehicle-tunning\bmw-7-le.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\vehicle-tunning\mercedes-c250.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\vehicle-tunning\s350-cdi.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\wheels.png" />
+    <Content Include="Backend-Challenge\FrontEnd\img\yacht-footer-bg.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\yacht\yacht-1.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\yacht\yacht-2.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\yacht\yacht-3.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\yacht\yacht-4.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\yacht\yacht-5.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\img\yacht\yacht-6.jpg" />
+    <Content Include="Backend-Challenge\FrontEnd\index.html" />
+    <Content Include="Backend-Challenge\FrontEnd\js\bootstrap.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\chart.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\color-map.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\contact.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\flag.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\gmaps.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\jquery-3.4.1.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\jquery.form.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\jquery.validate.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\main.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\map-active.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\map.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\popper.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\js\theme-dist.js" />
+    <Content Include="Backend-Challenge\FrontEnd\service.html" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\animate-css\animate.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\animate-css\wow.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\animation\animate.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\counter-up\jquery.counterup.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\counter-up\jquery.waypoints.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\country-selector\dd.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\country-selector\flags.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\country-selector\jquery.dd.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\datetimepicker\moment.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\datetimepicker\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\datetimepicker\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\icomoon-icon\fonts\icomoon95e1.svg" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\icomoon-icon\style.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\isotope\imagesloaded.pkgd.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\isotope\isotope.pkgd.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\jquery-ui\images\ui-icons_444444_256x240.html" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\jquery-ui\images\ui-icons_555555_256x240.html" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\jquery-ui\images\ui-icons_777620_256x240.html" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\jquery-ui\images\ui-icons_777777_256x240.html" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\jquery-ui\images\ui-icons_cc0000_256x240.html" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\jquery-ui\images\ui-icons_ffffff_256x240.html" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\jquery-ui\jquery-ui.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\jquery-ui\jquery-ui.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\linericon\fonts\Linearicons-Free54e9.svg" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\linericon\style.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\nice-scroll\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\nice-scroll\jquery.mCustomScrollbar.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\nice-scroll\jquery.nicescroll.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\nice-scroll\mCSB_buttons.html" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\nice-select\css\nice-select.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\nice-select\js\jquery.nice-select.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\owl-carousel\assets\owl.carousel.min.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\owl-carousel\assets\owl.video.play.png" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\popup\jquery.magnific-popup.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\popup\magnific-popup.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\slick\ajax-loader.gif" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\slick\fonts\slick.svg" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\slick\slick-theme.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\slick\slick.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\slick\slick.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\slick\slick.min.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\themify-icon\fonts\themify9f24.svg" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\themify-icon\themify-icons.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\twenty\css\twentytwenty.css" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\twenty\js\jquery.event.move.js" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\twenty\js\jquery.twentytwenty.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\Model3.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model3.edmx</DependentUpon>
+      <LastGenOutput>Model3.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model3.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model3.edmx</DependentUpon>
+      <LastGenOutput>Model3.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BasvuruController.cs" />
+    <Compile Include="Controllers\HizmetController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IletisimController.cs" />
+    <Compile Include="Controllers\SliderController.cs" />
+    <Compile Include="Controllers\SorularController.cs" />
+    <Compile Include="Controllers\TuningliController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArabaMarka.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArabaMarkaeski_.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\arabamarkamodel_Result.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\arabamm_Result.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArabaModel.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArabaModeleski_.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArabaMotor.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArabaMotorEditsiz.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArabaMotorSON.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArabaMotor_.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArabaYil.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArabaYil_.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BasvuruSayfasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bayiler.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bayimusterileri.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bayipromosyontalepgor_Result.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\benzinchipuygulamasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\benzinliAraclar.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\benzinliuygulamasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\boxuygulamasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\chiptuning.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\chipyazilimiuygulamasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\dizelAraclar.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dizeluygulamasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dosyaTalep.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ebulten.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ekibimizSayfasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fotogaleri.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\gelenmesajlar.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\gidenmesajlar.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\gonderilenpromosyonlar_Result.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\gonderilenpromosyontalepgor_Result.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\haberlerSayfasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\hakkimizdaSayfasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\iletisimFormu.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\iletisimSayfasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\iller.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\instagramsube.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mesajlar.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\misyonumuzSayfasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model3.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model3.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model3.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\musteriyorumgetir2_Result.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\musteriyorumgetir3_Result.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\musteriyorumgetir_Result.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\musteriyorumlari.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\panel.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pedaluygulamasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\promosyonlar.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\promosyontalep.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\promosyontalepgor_Result.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\promosyonuruntipinegoregetir2_Result.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\promosyonuruntipinegoregetir_Result.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\raporlar.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\referanslarSayfasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\slider.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sm.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sorular.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sssSayfasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sssSayfasie.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sssSayfasiu.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\subeler.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\torkvegucartisi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tumarabaresimler.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tuningliaraclar.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\videogaleri.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vizyonumuzSayfasi.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\y.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\YagmurArabaMotor.cs">
+      <DependentUpon>Model3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AboutModel.cs" />
+    <Compile Include="ViewModels\HizmetModel.cs" />
+    <Compile Include="ViewModels\HomeModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Backend-Challenge\Dökümantasyon\.~lock.İstenilen değişiklikler.docx#" />
+    <Content Include="Backend-Challenge\Dökümantasyon\İstenilen değişiklikler.docx" />
+    <Content Include="Backend-Challenge\FrontEnd\.idea\.gitignore" />
+    <Content Include="Backend-Challenge\FrontEnd\.idea\ChipTunning.iml" />
+    <Content Include="Backend-Challenge\FrontEnd\fonts\fontawesome-webfont3295.eot" />
+    <Content Include="Backend-Challenge\FrontEnd\fonts\fontawesome-webfont3295.ttf" />
+    <Content Include="Backend-Challenge\FrontEnd\fonts\fontawesome-webfont3295.woff" />
+    <Content Include="Backend-Challenge\FrontEnd\fonts\fontawesome-webfont3295.woff2" />
+    <Content Include="Backend-Challenge\FrontEnd\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Backend-Challenge\FrontEnd\HP.pdf" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\icomoon-icon\fonts\icomoon95e1.eot" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\icomoon-icon\fonts\icomoon95e1.ttf" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\icomoon-icon\fonts\icomoon95e1.woff" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\linericon\fonts\Linearicons-Free54e9.eot" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\linericon\fonts\Linearicons-Free54e9.ttf" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\linericon\fonts\Linearicons-Free54e9.woff" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\linericon\fonts\Linearicons-Free54e9.woff2" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\linericon\fonts\Linearicons-Freed41d.eot" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\slick\fonts\slick.eot" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\slick\fonts\slick.ttf" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\slick\fonts\slick.woff" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\slick\fonts\slickd41d.eot" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\themify-icon\fonts\themify9f24.eot" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\themify-icon\fonts\themify9f24.ttf" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\themify-icon\fonts\themify9f24.woff" />
+    <Content Include="Backend-Challenge\FrontEnd\vendors\themify-icon\fonts\themifyd41d.eot" />
+    <EntityDeploy Include="Models\Model3.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model3.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model3.edmx.diagram">
+      <DependentUpon>Model3.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Slider\Create.cshtml" />
+    <Content Include="Views\Slider\Delete.cshtml" />
+    <Content Include="Views\Slider\Details.cshtml" />
+    <Content Include="Views\Slider\Edit.cshtml" />
+    <Content Include="Views\Slider\Index.cshtml" />
+    <Content Include="Views\Home\Hesapla.cshtml" />
+    <Content Include="Views\Shared\_header.cshtml" />
+    <Content Include="Views\Shared\_footer.cshtml" />
+    <Content Include="Views\Tuningli\Create.cshtml" />
+    <Content Include="Views\Tuningli\Delete.cshtml" />
+    <Content Include="Views\Tuningli\Details.cshtml" />
+    <Content Include="Views\Tuningli\Edit.cshtml" />
+    <Content Include="Views\Tuningli\Index.cshtml" />
+    <Content Include="Views\Basvuru\HumanResources.cshtml" />
+    <Content Include="Views\Basvuru\Delete.cshtml" />
+    <Content Include="Views\Basvuru\Details.cshtml" />
+    <Content Include="Views\Basvuru\Edit.cshtml" />
+    <Content Include="Views\Basvuru\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\EditAbout.cshtml" />
+    <Content Include="Views\Home\EditMisyon.cshtml" />
+    <Content Include="Views\Home\EditVizyon.cshtml" />
+    <Content Include="Views\Home\EditHak.cshtml" />
+    <Content Include="Views\Home\SSS.cshtml" />
+    <Content Include="Views\Home\EditSSS.cshtml" />
+    <Content Include="Views\Iletisim\Create.cshtml" />
+    <Content Include="Views\Iletisim\Delete.cshtml" />
+    <Content Include="Views\Iletisim\Details.cshtml" />
+    <Content Include="Views\Iletisim\Edit.cshtml" />
+    <Content Include="Views\Iletisim\Index.cshtml" />
+    <Content Include="Views\Hizmet\Index.cshtml" />
+    <Content Include="Views\Hizmet\EditBenzinChip.cshtml" />
+    <Content Include="Views\Hizmet\EditBox.cshtml" />
+    <Content Include="Views\Hizmet\EditChip.cshtml" />
+    <Content Include="Views\Hizmet\EditPedal.cshtml" />
+    <Content Include="Views\Hizmet\EditTork.cshtml" />
+    <Content Include="Views\Hizmet\Service.cshtml" />
+    <Content Include="Views\Home\Faq.cshtml" />
+    <Content Include="Views\Sorular\Create.cshtml" />
+    <Content Include="Views\Sorular\Delete.cshtml" />
+    <Content Include="Views\Sorular\Details.cshtml" />
+    <Content Include="Views\Sorular\Edit.cshtml" />
+    <Content Include="Views\Sorular\Index.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="FormFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61347</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44385/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<tuning.Models.sssSayfasi> 
+@{
+    ViewBag.Title = "SSS";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>SSS</h2>
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>
+                SSS EDİT
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.yazi)
+        </td>
+        <td style="width:270px;">
+            @Html.ActionLink("Edit", "EditSSS", new { id = item.id }, new { @class = "btn btn-success" })
+
+        </td>
+    </tr>
+        }
+            
+
+    </table>
+</div>

@@ -1,0 +1,304 @@
+﻿@model tuning.ViewModels.HizmetModel
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="~/Backend-Challenge/FrontEnd/img/favicon.png" type="image/png">
+    <title>Hp Chip Tuning │ North Cyprus </title>
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/icomoon-icon/style.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/themify-icon/themify-icons.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/datetimepicker/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/slick/slick.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/slick/slick-theme.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/popup/magnific-popup.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/style.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/responsive.css">
+
+</head>
+<body data-scroll-animation="true" class="luxuary_bg">
+
+    <div class="preloader">
+        <div class="main-loader">
+            <span class="loader1"></span>
+            <span class="loader2"></span>
+            <span class="loader3"></span>
+        </div>
+    </div>
+
+    @Html.Partial("_header")
+
+    <section class="breadcrumb_area" style="        background: url(/Backend-Challenge/FrontEnd/img/breadcrumb/breadcrumb-bg-6.jpg)">
+        <div class="container">
+            <div class="breadcrumb_inner mt-75">
+                <h3>Hizmetlerimiz</h3>
+                <div class="link">
+                    <a href="index.html">Anasayfa</a>
+                    <a href="#">Hizmetlerimiz</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our_service_area pad_top">
+        <div class="container">
+            <div class="text-center single_dubble_title flag_title white slider_form_title">
+                <h5 class="main-red">CHIP TUNING</h5>
+                <h2 class="wow  fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    Hizmetlerimiz
+                </h2>
+            </div>
+
+            <div class="or_service_inner">
+                <div class="row flex-row-reverse">
+                    <div class="col-lg-8">
+                        <div class="service_body">
+                            <div class="tab-content" id="myTabContent">
+
+                                @foreach (var item in Model.BenzinChip)
+                                {
+                                    <div class="tab-pane fade" id="acc" role="tabpanel" aria-labelledby="acc-tab">
+                                        <div class="service_ex">
+                                            <div class="service_img">
+                                                <img class="img-fluid"
+                                                     src="~/Backend-Challenge/FrontEnd/img/services/our-service/@item.resim" alt="">
+                                            </div>
+                                            <div class="service_text black-bg">
+                                                <i class="icon-accident icon"></i>
+                                                <h4>@item.baslik</h4>
+                                                <p>
+                                                    @item.yazi
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                                @foreach (var item in Model.Box)
+                                {
+                                    <div class="tab-pane fade" id="rep" role="tabpanel" aria-labelledby="rep-tab">
+                                        <div class="service_ex">
+                                            <div class="service_img">
+                                                <img class="img-fluid"
+                                                     src="~/Backend-Challenge/FrontEnd/img/services/our-service/@item.resim"
+                                                     alt="">
+                                            </div>
+                                            <div class="service_text black-bg">
+                                                <i class="icon-mechanical icon"></i>
+                                                <h4>@item.baslik</h4>
+                                                <p>
+                                                    @item.yazi
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                                @foreach (var item in Model.Pedal)
+                                {
+                                    <div class="tab-pane fade" id="pain" role="tabpanel" aria-labelledby="pain-tab">
+                                        <div class="service_ex">
+                                            <div class="service_img">
+                                                <img class="img-fluid"
+                                                     src="~/Backend-Challenge/FrontEnd/img/services/our-service/@item.resim"
+                                                     alt="">
+                                            </div>
+                                            <div class="service_text black-bg">
+                                                <i class="icon-paint icon"></i>
+                                                <h4>@item.baslik</h4>
+                                                <p>
+                                                    @item.yazi
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                                @foreach (var item in Model.ChipYazilim)
+                                {
+                                    <div class="tab-pane fade" id="brak" role="tabpanel" aria-labelledby="brak-tab">
+                                        <div class="service_ex">
+                                            <div class="service_img">
+                                                <img class="img-fluid"
+                                                     src="~/Backend-Challenge/FrontEnd/img/services/our-service/@item.resim" alt="">
+                                            </div>
+                                            <div class="service_text black-bg">
+                                                <i class="icon-brake icon"></i>
+                                                <h4>@item.baslik</h4>
+                                                <p>
+                                                    @item.yazi
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+                                @foreach (var item in Model.Tork)
+                                {
+                                    <div class="tab-pane fade" id="mobile" role="tabpanel" aria-labelledby="mobile-tab">
+                                        <div class="service_ex">
+                                            <div class="service_img">
+                                                <img class="img-fluid"
+                                                     src="~/Backend-Challenge/FrontEnd/img/services/our-service/@item.resim" alt="">
+                                            </div>
+                                            <div class="service_text black-bg">
+                                                <i class="icon-oil_2 icon"></i>
+                                                <h4>@item.baslik</h4>
+                                                <p>
+                                                   @item.yazi
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="service_button">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link" id="acc-tab" data-toggle="tab" href="#acc" role="tab"
+                                       aria-controls="acc" aria-selected="false">
+                                        <i class="icon-accident"></i> Benzin Chip
+                                        Uygulaması
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="rep-tab" data-toggle="tab" href="#rep" role="tab"
+                                       aria-controls="rep" aria-selected="false">
+                                        <i class="icon-mechanical"></i> Box
+                                        Uygulaması
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pain-tab" data-toggle="tab" href="#pain" role="tab"
+                                       aria-controls="pain" aria-selected="false">
+                                        <i class="icon-paint"></i> Pedal
+                                        Uygulaması
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="brak-tab" data-toggle="tab" href="#brak" role="tab"
+                                       aria-controls="brak" aria-selected="false">
+                                        <i class="icon-brake"></i> Chip
+                                        Yazıımı
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="mobile-tab" data-toggle="tab" href="#mobile" role="tab"
+                                       aria-controls="mobile" aria-selected="false">
+                                        <i class="icon-oil_2"></i> Tork ve Güç
+                                        Arttırımı
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="most_service_area">
+        <div class="container">
+            <div class="row most_service_inner">
+                <div class="col-lg-5 d-flex">
+                    <div class="most_service_text">
+                        <h6 class="red-text">Kuzey Kıbrıs'ın En Büyük</h6>
+                        <h3 class="white-text">Chip Tuning Merkezi</h3>
+                        <p>25.000 m² alan üzerine kurulmuş ve tam donanımlı yazılım merkezimizi ziyaret etmek için lütfen iletişime geçiniz.</p>
+                        <a class="main_btn " href="#">İletİşİm</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="most_service_img">
+                        <img class="wow  fadeInUp animated" data-wow-delay="0.2s" src="~/Backend-Challenge/FrontEnd/img/1.png" alt="" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="budget_feaute_area">
+        <div class="container">
+            <div class="row b_feature_inner">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="b_f_item wow border-padding  fadeInLeft animated" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                        <div class="icon">
+                            <img src="~/Backend-Challenge/FrontEnd/img/icon/headphones.png" alt="" class="service-icon-width">
+                        </div>
+                        <a href="#"><h4 class="small-f-17">Canlı Destek</h4></a>
+                        <p class="s-p-13">Yazılım öncesi ve sonrası bilgi almak isterseniz mesaj atmanız halinde anında cevap veriyoruz. </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="b_f_item wow border-padding  fadeInLeft animated" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                        <div class="icon">
+                            <img src="~/Backend-Challenge/FrontEnd/img/icon/happy.png" alt="" class="service-icon-width">
+                        </div>
+                        <a href="#"><h4 class="small-f-17">Memnuniyet Garantisi</h4></a>
+                        <p class="s-p-13">Yazılım uygulanan araçlardaki temel hedefimiz müşteriyi %100 memnun etmektir. </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 ">
+                    <div class="b_f_item wow border-padding  fadeInLeft animated" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                        <div class="icon">
+                            <img src="~/Backend-Challenge/FrontEnd/img/icon/clipboard.png" alt="" class="service-icon-width">
+                        </div>
+                        <a href="#"><h4 class="small-f-17">Yazılım Raporlama</h4></a>
+                        <p class="s-p-13">Chip Tuning uygulamasından sonra aracınızın değerlerini rapor olarak sunuyoruz. </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="b_f_item wow border-padding  fadeInLeft animated" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                        <div class="icon">
+                            <img src="~/Backend-Challenge/FrontEnd/img/icon/timer.png" alt="" class="service-icon-width">
+                        </div>
+                        <a href="#"><h4 class="small-f-17">Zamanında Teslim</h4></a>
+                        <p class="s-p-13">Aracınızın yazılımını aynı gün içerisinde yaparak sorunsuz olarak sizlere iade ediyoruz. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @Html.Partial("_footer")
+
+
+    <script src="~/Backend-Challenge/FrontEnd/js/jquery-3.4.1.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/popper.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/bootstrap.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/datetimepicker/moment.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/datetimepicker/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/slick/slick.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/counter-up/jquery.counterup.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/animate-css/wow.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/theme-dist.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/main.js"></script>
+</body>
+
+
+</html>

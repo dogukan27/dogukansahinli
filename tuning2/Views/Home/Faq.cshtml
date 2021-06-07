@@ -1,0 +1,408 @@
+﻿@model IEnumerable<tuning.Models.sorular>
+@{
+    Layout = null;
+    
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="~/Backend-Challenge/FrontEnd/img/favicon.png" type="image/png">
+    <title>Hp Chip Tuning │ North Cyprus </title>
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/icomoon-icon/style.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/themify-icon/themify-icons.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/datetimepicker/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/slick/slick.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/slick/slick-theme.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/popup/magnific-popup.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/style.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/responsive.css">
+</head>
+<body data-scroll-animation="true" class="luxuary_bg">
+
+    <div class="preloader">
+        <div class="main-loader">
+            <span class="loader1"></span>
+            <span class="loader2"></span>
+            <span class="loader3"></span>
+        </div>
+    </div>
+
+    @Html.Partial("_header")
+
+
+    <section class="breadcrumb_area" style="        background: url(/Backend-Challenge/FrontEnd/img/breadcrumb/breadcrumb-bg-3.jpg)">
+        <div class="container">
+            <div class="breadcrumb_inner mt-75">
+                <h3>Sıkça Sorulan Sorular</h3>
+                <div class="link">
+                    <a href="index.html">Anasayfa</a>
+                    <a href="#">Sıkça Sorulan Sorular</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="general_ques_area p_100">
+        <div class="container">
+            <div class="text-center single_dubble_title flag_title white slider_form_title mt-30">
+                <h2 class="wow  fadeInUp  animated" data-wow-delay="0.2s"
+                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    Sıkça Sorulan<span class="text-main"> Sorular</span>
+                </h2>
+            </div>
+            <div class=" row general_ques_inner">
+                <div class="accordion col-lg-6 small-mb-30" id="accordionExample">
+
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <button class=" small-f-15 small-f-12 btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                @Model.ToArray()[0].baslik
+                                <i class="ti-plus"></i>
+                                <i class="ti-minus"></i>
+                            </button>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                @Model.ToArray()[0].soru
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <button class=" small-f-15 small-f-12 btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                @Model.ToArray()[1].baslik
+                                <i class="ti-plus"></i>
+                                <i class="ti-minus"></i>
+                            </button>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                @Model.ToArray()[1].soru
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <button class="small-f-15 small-f-12 btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                @Model.ToArray()[2].baslik
+                                <i class="ti-plus"></i>
+                                <i class="ti-minus"></i>
+                            </button>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                @Model.ToArray()[2].soru
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingfour">
+                            <button class=" small-f-15 small-f-12 btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                @Model.ToArray()[3].baslik
+                                <i class="ti-plus"></i>
+                                <i class="ti-minus"></i>
+                            </button>
+                        </div>
+                        <div id="collapsefour" class="collapse" aria-labelledby="headingfour"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                @Model.ToArray()[3].soru
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingfive">
+                            <button class="small-f-15 small-f-12 btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                @Model.ToArray()[4].baslik
+                                <i class="ti-plus"></i>
+                                <i class="ti-minus"></i>
+                            </button>
+                        </div>
+                        <div id="collapsefive" class="collapse" aria-labelledby="headingfive"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                @Model.ToArray()[4].soru
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingsix">
+                            <button class="small-f-15 small-f-12 btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                                @Model.ToArray()[5].baslik
+                                <i class="ti-plus"></i>
+                                <i class="ti-minus"></i>
+                            </button>
+                        </div>
+                        <div id="collapsesix" class="collapse" aria-labelledby="headingsix"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                @Model.ToArray()[5].soru
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="small-f-15 card-header" id="headingseven">
+                            <button class="small-f-15 small-f-12 btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+                                @Model.ToArray()[6].baslik
+                                <i class="ti-plus"></i>
+                                <i class="ti-minus"></i>
+                            </button>
+                        </div>
+                        <div id="collapseseven" class="collapse" aria-labelledby="headingseven"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                @Model.ToArray()[6].soru
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion col-lg-6 ">
+                    <img src="~/Backend-Challenge/FrontEnd/img/sss-banner.jpg" alt="" class="img-fluid small-w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact_information p_50 s-pt-0">
+        <div class="container ">
+            <div class="text-center single_dubble_title flag_title white slider_form_title mt-30 mb-20">
+                <h5 class="main-red wow  fadeInUp  animated" data-wow-delay="0.2s">Merak Ettiklerinizi Bulamadıysanız</h5>
+                <h2 class="wow  fadeInUp  animated" data-wow-delay="0.2s"
+                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    İletişime<span class="text-main"> Geçin</span>
+
+                </h2>
+            </div>
+            <div class="row contact_info_inner justify-content-center">
+                <div class=" mb-20 col-lg-4 col-md-12 col-sm-12 wow  fadeIn  animated " data-wow-delay="0.2s"
+                     style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                    <div class="contact_info_item  p-20 border-red b-bottom-none">
+                        <i class="icon-map_marker"></i>
+                        <h4>Adres</h4>
+                        <p class="main-white"> Larnaka Bul. Köseoğlu Center<br> No: 2/a KUZEY KIBRIS</p>
+                    </div>
+                    <div class="contact_info_item  p-20 border-red b-bottom-none">
+                        <i class="icon-phone1"></i>
+                        <h4>Telefon</h4>
+                        <h5 class="main-white"><a href="tel:+8801676790690">+90 533-830-9600</a> <span></span></h5>
+                        <h5 class="main-white"><a href="tel:+8801676790690">+90 531-834-5394</a> <span></span></h5>
+                    </div>
+                    <div class="contact_info_item  p-20 border-red">
+                        <i class="icon-envelop"></i>
+                        <h4>Mail Adresi</h4>
+                        <h5 class="main-white"><a href="mailto:contact.dealer@example.com">info@hpchiptuning.com</a></h5>
+                        <h5 class="main-white"><a href="mailto:servicecenter@domain.com">service@hpchiptuning.com</a></h5>
+                    </div>
+                </div>
+                <div class="w-95 col-lg-8 col-md-12 col-sm-12 wow  fadeIn  p-20 border-red main_contact_area p_100 animated"
+                     data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+                    <div class="container">
+                        <div class="flag_center_title wow  fadeInUp" data-wow-delay="0.2s"
+                             style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                            <h2 class="f-size-30">
+                                <img src="img/icon/flag-2.png" alt="">İletişime <span class="main-red">Geçin</span>
+                            </h2>
+                        </div>
+                        <div class="main_contact_inner">
+                            <form class="row contact_form" action="#" method="post" id="contactForm"
+                                  novalidate="novalidate">
+                                <div class="form-group col-md-4">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Ad-Soyad">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <input type="text" class="form-control" id="number" name="number" placeholder="Telefon">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <textarea class="form-control" name="message" id="message" rows="1"
+                                              placeholder="Mesajınız"></textarea>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <button type="submit" value="submit" class="btn submit_btn red form-control">
+                                        Mesaj
+                                        Gönder
+                                    </button>
+                                </div>
+                            </form>
+                            <div id="success">Mesajınız Başarıyle Gönderildi !</div>
+                            <div id="error">Birşeyler yanlış gitti. Lütfen tekrar deneyiniz.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer_area red_footer_area ab_footer">
+        <div class="footer_widgets">
+            <section class="client_logo_slider_area border_none">
+                <div class="container">
+                    <div class="client_logo_slider owl-carousel">
+                        <div class="item">
+                            <img src="~/Backend-Challenge/FrontEnd/img/client-logo/elnec.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="~/Backend-Challenge/FrontEnd/img/client-logo/evc.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="~/Backend-Challenge/FrontEnd/img/client-logo/race.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="~/Backend-Challenge/FrontEnd/img/client-logo/fg.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="~/Backend-Challenge/FrontEnd/img/client-logo/cmd.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="~/Backend-Challenge/FrontEnd/img/client-logo/piasini.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="~/Backend-Challenge/FrontEnd/img/client-logo/alientech.png" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="~/Backend-Challenge/FrontEnd/img/client-logo/byte.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container">
+                <div class="row f_widgets_inner">
+                    <div class="col-lg-3 col-sm-6 wow animated fadeInUp" data-wow-delay="0.2s">
+                        <aside class="f_widget about_widget">
+                            <a class="f_logo" href="#">
+                                <img src="~/Backend-Challenge/FrontEnd/img/repair-logo.png"
+                                     srcset="~/Backend-Challenge/FrontEnd/img/chip-logo2.png 2x" alt="bar" class="max-width">
+                            </a>
+                            <p>
+                                <i class="icon-map_marker_2" aria-hidden="true"></i> Larnaka Bul. Köseoğlu Center No:2-a
+                                İskele / KIBRIS
+                            </p>
+                            <a href="mailto:info@hpchiptuning.com">
+                                <i class="icon-envelop_2" aria-hidden="true"></i>
+                                info@hpchiptuning.com
+                            </a>
+                            <a href="tel:05338309600"><i class="icon-phone_2" aria-hidden="true"></i> +90 533 830 96 00</a>
+                        </aside>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 wow animated fadeInUp" data-wow-delay="0.4s">
+                        <aside class="f_widget link_widget">
+                            <div class="f_title">
+                                <h3>Chip Tuning</h3>
+                            </div>
+                            <ul class="nav flex-column">
+                                <li><a href="#">Güç Hesaplama</a></li>
+                                <li><a href="#">Tuning Hizmetleri</a></li>
+                                <li><a href="#">Tuning Haberler</a></li>
+                                <li><a href="#">İletişim</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 wow animated fadeInUp" data-wow-delay="0.6s">
+                        <aside class="f_widget link_widget">
+                            <div class="f_title">
+                                <h3>Hızlı Menü</h3>
+                            </div>
+                            <ul class="nav flex-column">
+                                <li><a href="#">Anasayfa</a></li>
+                                <li><a href="#">Hakkımızda</a></li>
+                                <li><a href="#">Kurumsal</a></li>
+                                <li><a href="#">S.S.S</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="col-lg-5 col-sm-6 wow animated fadeInUp" data-wow-delay="0.8s">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer_card wow animated fadeIn" data-wow-delay="0.4s">
+            <div class="container">
+                <div class="f_card_inner d-flex justify-content-between">
+                    <div class="left">
+                        <p class="mt-10 color-white">
+                            Sosyal medya hesaplarımızı takip ederek araçlar hakkında anında bilgi
+                            sahibi olabilirsiniz.
+                        </p>
+                    </div>
+                    <aside class="f_widget subscribe_widget">
+                        <div class="right">
+                            <ul class="nav">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <div class="footer_copyright">
+            <div class="container">
+                <div class="copyright_inner d-flex justify-content-between">
+                    <div class="left">
+                        <p>
+                            Copyright
+                            <script>document.write(new Date().getFullYear());</script>
+                            HpChipTuning
+
+                        </p>
+                    </div>
+                    <div class="right">
+                        <ul class="nav">
+                            <li><a href="#"><img src="~/Backend-Challenge/FrontEnd/img/hashlogo.png" alt=""></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="~/Backend-Challenge/FrontEnd/js/jquery-3.4.1.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/popper.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/bootstrap.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/datetimepicker/moment.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/datetimepicker/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/slick/slick.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/counter-up/jquery.counterup.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/animate-css/wow.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/theme-dist.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/main.js"></script>
+</body>
+</html>
+

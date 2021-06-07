@@ -1,0 +1,806 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hpchiptuningDBModel1StoreContainer" CdmEntityContainer="hpchiptuningDBEntities1">
+    <EntitySetMapping Name="ArabaMarkas">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ArabaMarka">
+        <MappingFragment StoreEntitySet="ArabaMarka">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+          <ScalarProperty Name="MarkaAdi" ColumnName="MarkaAdi" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="Stage2" ColumnName="Stage2" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArabaMarkaeski_">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ArabaMarkaeski_">
+        <MappingFragment StoreEntitySet="ArabaMarkaeski_">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+          <ScalarProperty Name="MarkaAdi" ColumnName="MarkaAdi" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="Stage2" ColumnName="Stage2" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArabaModels">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ArabaModel">
+        <MappingFragment StoreEntitySet="ArabaModel">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ModelAdi" ColumnName="ModelAdi" />
+          <ScalarProperty Name="MarkaID" ColumnName="MarkaID" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArabaModeleski_">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ArabaModeleski_">
+        <MappingFragment StoreEntitySet="ArabaModeleski_">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ModelAdi" ColumnName="ModelAdi" />
+          <ScalarProperty Name="MarkaID" ColumnName="MarkaID" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArabaMotors">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ArabaMotor">
+        <MappingFragment StoreEntitySet="ArabaMotor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MotorAdi" ColumnName="MotorAdi" />
+          <ScalarProperty Name="OrjinalBeygir" ColumnName="OrjinalBeygir" />
+          <ScalarProperty Name="YeniBeygir" ColumnName="YeniBeygir" />
+          <ScalarProperty Name="OrjinalTork" ColumnName="OrjinalTork" />
+          <ScalarProperty Name="YeniTork" ColumnName="YeniTork" />
+          <ScalarProperty Name="YilID" ColumnName="YilID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="YakitTip" ColumnName="YakitTip" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArabaMotorEditsizs">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ArabaMotorEditsiz">
+        <MappingFragment StoreEntitySet="ArabaMotorEditsiz">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MotorAdi" ColumnName="MotorAdi" />
+          <ScalarProperty Name="OrjinalBeygir" ColumnName="OrjinalBeygir" />
+          <ScalarProperty Name="YeniBeygir" ColumnName="YeniBeygir" />
+          <ScalarProperty Name="OrjinalTork" ColumnName="OrjinalTork" />
+          <ScalarProperty Name="YeniTork" ColumnName="YeniTork" />
+          <ScalarProperty Name="YilID" ColumnName="YilID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="YakitTip" ColumnName="YakitTip" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArabaMotorSONs">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ArabaMotorSON">
+        <MappingFragment StoreEntitySet="ArabaMotorSON">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MotorAdi" ColumnName="MotorAdi" />
+          <ScalarProperty Name="OrjinalBeygir" ColumnName="OrjinalBeygir" />
+          <ScalarProperty Name="YeniBeygir" ColumnName="YeniBeygir" />
+          <ScalarProperty Name="OrjinalTork" ColumnName="OrjinalTork" />
+          <ScalarProperty Name="YeniTork" ColumnName="YeniTork" />
+          <ScalarProperty Name="YilID" ColumnName="YilID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="YakitTip" ColumnName="YakitTip" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArabaYils">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ArabaYil">
+        <MappingFragment StoreEntitySet="ArabaYil">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArabaYil_">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ArabaYil_">
+        <MappingFragment StoreEntitySet="ArabaYil_">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BasvuruSayfasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.BasvuruSayfasi">
+        <MappingFragment StoreEntitySet="BasvuruSayfasi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PostaKodu" ColumnName="PostaKodu" />
+          <ScalarProperty Name="Sehir" ColumnName="Sehir" />
+          <ScalarProperty Name="Mahalle" ColumnName="Mahalle" />
+          <ScalarProperty Name="Apartman" ColumnName="Apartman" />
+          <ScalarProperty Name="Tanıtım" ColumnName="Tanıtım" />
+          <ScalarProperty Name="Cv" ColumnName="Cv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bayilers">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.bayiler">
+        <MappingFragment StoreEntitySet="bayiler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="bayiAdi" ColumnName="bayiAdi" />
+          <ScalarProperty Name="bayiIl" ColumnName="bayiIl" />
+          <ScalarProperty Name="bayiNumarasi" ColumnName="bayiNumarasi" />
+          <ScalarProperty Name="bayiKulad" ColumnName="bayiKulad" />
+          <ScalarProperty Name="bayiSifre" ColumnName="bayiSifre" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bayimusterileris">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.bayimusterileri">
+        <MappingFragment StoreEntitySet="bayimusterileri">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adSoyad" ColumnName="adSoyad" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="sehir" ColumnName="sehir" />
+          <ScalarProperty Name="aracPlaka" ColumnName="aracPlaka" />
+          <ScalarProperty Name="aracBilgi" ColumnName="aracBilgi" />
+          <ScalarProperty Name="bayiId" ColumnName="bayiId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="benzinchipuygulamasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.benzinchipuygulamasi">
+        <MappingFragment StoreEntitySet="benzinchipuygulamasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="benzinliAraclars">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.benzinliAraclar">
+        <MappingFragment StoreEntitySet="benzinliAraclar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="yolu" ColumnName="yolu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="benzinliuygulamasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.benzinliuygulamasi">
+        <MappingFragment StoreEntitySet="benzinliuygulamasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="boxuygulamasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.boxuygulamasi">
+        <MappingFragment StoreEntitySet="boxuygulamasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chiptunings">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.chiptuning">
+        <MappingFragment StoreEntitySet="chiptuning">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="icerik" ColumnName="icerik" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chipyazilimiuygulamasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.chipyazilimiuygulamasi">
+        <MappingFragment StoreEntitySet="chipyazilimiuygulamasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dizelAraclars">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.dizelAraclar">
+        <MappingFragment StoreEntitySet="dizelAraclar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="yolu" ColumnName="yolu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dizeluygulamasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.dizeluygulamasi">
+        <MappingFragment StoreEntitySet="dizeluygulamasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dosyaTaleps">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.dosyaTalep">
+        <MappingFragment StoreEntitySet="dosyaTalep">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="aracMarka" ColumnName="aracMarka" />
+          <ScalarProperty Name="aracModel" ColumnName="aracModel" />
+          <ScalarProperty Name="aracMotor" ColumnName="aracMotor" />
+          <ScalarProperty Name="aracPlaka" ColumnName="aracPlaka" />
+          <ScalarProperty Name="stage1" ColumnName="stage1" />
+          <ScalarProperty Name="stage2" ColumnName="stage2" />
+          <ScalarProperty Name="stage3" ColumnName="stage3" />
+          <ScalarProperty Name="dpfDelete" ColumnName="dpfDelete" />
+          <ScalarProperty Name="vmaxOff" ColumnName="vmaxOff" />
+          <ScalarProperty Name="dtcOff" ColumnName="dtcOff" />
+          <ScalarProperty Name="addblueDelete" ColumnName="addblueDelete" />
+          <ScalarProperty Name="hizLimitorDelete" ColumnName="hizLimitorDelete" />
+          <ScalarProperty Name="egrDelete" ColumnName="egrDelete" />
+          <ScalarProperty Name="notu" ColumnName="notu" />
+          <ScalarProperty Name="yuklemeTarihi" ColumnName="yuklemeTarihi" />
+          <ScalarProperty Name="yuklemeSaati" ColumnName="yuklemeSaati" />
+          <ScalarProperty Name="dosya" ColumnName="dosya" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="bayiAdi" ColumnName="bayiAdi" />
+          <ScalarProperty Name="bayiID" ColumnName="bayiID" />
+          <ScalarProperty Name="modludosya" ColumnName="modludosya" />
+          <ScalarProperty Name="modTarihi" ColumnName="modTarihi" />
+          <ScalarProperty Name="modSaati" ColumnName="modSaati" />
+          <ScalarProperty Name="fiyat" ColumnName="fiyat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ebultens">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ebulten">
+        <MappingFragment StoreEntitySet="ebulten">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ekibimizSayfasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ekibimizSayfasi">
+        <MappingFragment StoreEntitySet="ekibimizSayfasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="yolu" ColumnName="yolu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fotogaleris">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.fotogaleri">
+        <MappingFragment StoreEntitySet="fotogaleri">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gelenmesajlars">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.gelenmesajlar">
+        <MappingFragment StoreEntitySet="gelenmesajlar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="icerik" ColumnName="icerik" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="gonderen" ColumnName="gonderen" />
+          <ScalarProperty Name="alici" ColumnName="alici" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gidenmesajlars">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.gidenmesajlar">
+        <MappingFragment StoreEntitySet="gidenmesajlar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="icerik" ColumnName="icerik" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="gonderen" ColumnName="gonderen" />
+          <ScalarProperty Name="alici" ColumnName="alici" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="haberlerSayfasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.haberlerSayfasi">
+        <MappingFragment StoreEntitySet="haberlerSayfasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="icerik" ColumnName="icerik" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="yolu" ColumnName="yolu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hakkimizdaSayfasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.hakkimizdaSayfasi">
+        <MappingFragment StoreEntitySet="hakkimizdaSayfasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iletisimFormus">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.iletisimFormu">
+        <MappingFragment StoreEntitySet="iletisimFormu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adsoyad" ColumnName="adsoyad" />
+          <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iletisimSayfasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.iletisimSayfasi">
+        <MappingFragment StoreEntitySet="iletisimSayfasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="map" ColumnName="map" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="illers">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.iller">
+        <MappingFragment StoreEntitySet="iller">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Plaka" ColumnName="Plaka" />
+          <ScalarProperty Name="SehirAd" ColumnName="SehirAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="instagramsubes">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.instagramsube">
+        <MappingFragment StoreEntitySet="instagramsube">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subeid" ColumnName="subeid" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mesajlars">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.mesajlar">
+        <MappingFragment StoreEntitySet="mesajlar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="icerik" ColumnName="icerik" />
+          <ScalarProperty Name="gonderen" ColumnName="gonderen" />
+          <ScalarProperty Name="alici" ColumnName="alici" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="misyonumuzSayfasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.misyonumuzSayfasi">
+        <MappingFragment StoreEntitySet="misyonumuzSayfasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="musteriyorumlaris">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.musteriyorumlari">
+        <MappingFragment StoreEntitySet="musteriyorumlari">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adSoyad" ColumnName="adSoyad" />
+          <ScalarProperty Name="arac" ColumnName="arac" />
+          <ScalarProperty Name="aracbilgi" ColumnName="aracbilgi" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="yorum" ColumnName="yorum" />
+          <ScalarProperty Name="markaID" ColumnName="markaID" />
+          <ScalarProperty Name="resimm" ColumnName="resimm" />
+          <ScalarProperty Name="yolu" ColumnName="yolu" />
+          <ScalarProperty Name="modelID" ColumnName="modelID" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="panels">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.panel">
+        <MappingFragment StoreEntitySet="panel">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kulad" ColumnName="kulad" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pedaluygulamasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.pedaluygulamasi">
+        <MappingFragment StoreEntitySet="pedaluygulamasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="promosyonlars">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.promosyonlar">
+        <MappingFragment StoreEntitySet="promosyonlar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunAdet" ColumnName="urunAdet" />
+          <ScalarProperty Name="urunTip" ColumnName="urunTip" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="promosyontaleps">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.promosyontalep">
+        <MappingFragment StoreEntitySet="promosyontalep">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="urunid" ColumnName="urunid" />
+          <ScalarProperty Name="adet" ColumnName="adet" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="taleptarihi" ColumnName="taleptarihi" />
+          <ScalarProperty Name="gonderilmetarihi" ColumnName="gonderilmetarihi" />
+          <ScalarProperty Name="bayiID" ColumnName="bayiID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="raporlars">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.raporlar">
+        <MappingFragment StoreEntitySet="raporlar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="bayiKulad" ColumnName="bayiKulad" />
+          <ScalarProperty Name="islem" ColumnName="islem" />
+          <ScalarProperty Name="islemtarihi" ColumnName="islemtarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="referanslarSayfasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.referanslarSayfasi">
+        <MappingFragment StoreEntitySet="referanslarSayfasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="yolu" ColumnName="yolu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sliders">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.slider">
+        <MappingFragment StoreEntitySet="slider">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim1" ColumnName="resim1" />
+          <ScalarProperty Name="resim2" ColumnName="resim2" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sms">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.sm">
+        <MappingFragment StoreEntitySet="sms">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="numaralar" ColumnName="numaralar" />
+          <ScalarProperty Name="gonderenBayi" ColumnName="gonderenBayi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sssSayfasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.sssSayfasi">
+        <MappingFragment StoreEntitySet="sssSayfasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sssSayfasies">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.sssSayfasie">
+        <MappingFragment StoreEntitySet="sssSayfasie">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sssSayfasius">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.sssSayfasiu">
+        <MappingFragment StoreEntitySet="sssSayfasiu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subelers">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.subeler">
+        <MappingFragment StoreEntitySet="subeler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subeAdi" ColumnName="subeAdi" />
+          <ScalarProperty Name="yetkiliAdSoyad" ColumnName="yetkiliAdSoyad" />
+          <ScalarProperty Name="tel1" ColumnName="tel1" />
+          <ScalarProperty Name="tel2" ColumnName="tel2" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="mapkodu" ColumnName="mapkodu" />
+          <ScalarProperty Name="suberesim" ColumnName="suberesim" />
+          <ScalarProperty Name="suberesimyol" ColumnName="suberesimyol" />
+          <ScalarProperty Name="calismaSaat" ColumnName="calismaSaat" />
+          <ScalarProperty Name="plakaKodu" ColumnName="plakaKodu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="torkvegucartisis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.torkvegucartisi">
+        <MappingFragment StoreEntitySet="torkvegucartisi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tumarabaresimlers">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.tumarabaresimler">
+        <MappingFragment StoreEntitySet="tumarabaresimler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="modelID" ColumnName="modelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tuningliaraclars">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.tuningliaraclar">
+        <MappingFragment StoreEntitySet="tuningliaraclar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="marka" ColumnName="marka" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="orjbeygir" ColumnName="orjbeygir" />
+          <ScalarProperty Name="orjtork" ColumnName="orjtork" />
+          <ScalarProperty Name="kbeygir" ColumnName="kbeygir" />
+          <ScalarProperty Name="ktork" ColumnName="ktork" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+          <ScalarProperty Name="yolu" ColumnName="yolu" />
+          <ScalarProperty Name="yakit" ColumnName="yakit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="videogaleris">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.videogaleri">
+        <MappingFragment StoreEntitySet="videogaleri">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+          <ScalarProperty Name="url" ColumnName="url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vizyonumuzSayfasis">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.vizyonumuzSayfasi">
+        <MappingFragment StoreEntitySet="vizyonumuzSayfasi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="yazi" ColumnName="yazi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="y">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.y">
+        <MappingFragment StoreEntitySet="y">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MotorAdi" ColumnName="MotorAdi" />
+          <ScalarProperty Name="OrjinalBeygir" ColumnName="OrjinalBeygir" />
+          <ScalarProperty Name="YeniBeygir" ColumnName="YeniBeygir" />
+          <ScalarProperty Name="OrjinalTork" ColumnName="OrjinalTork" />
+          <ScalarProperty Name="YeniTork" ColumnName="YeniTork" />
+          <ScalarProperty Name="YilID" ColumnName="YilID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="YakitTip" ColumnName="YakitTip" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YagmurArabaMotors">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.YagmurArabaMotor">
+        <MappingFragment StoreEntitySet="YagmurArabaMotor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MotorAdi" ColumnName="MotorAdi" />
+          <ScalarProperty Name="OrjinalBeygir" ColumnName="OrjinalBeygir" />
+          <ScalarProperty Name="YeniBeygir" ColumnName="YeniBeygir" />
+          <ScalarProperty Name="OrjinalTork" ColumnName="OrjinalTork" />
+          <ScalarProperty Name="YeniTork" ColumnName="YeniTork" />
+          <ScalarProperty Name="YilID" ColumnName="YilID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="YakitTip" ColumnName="YakitTip" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArabaMotor_">
+      <EntityTypeMapping TypeName="hpchiptuningDBModel1.ArabaMotor_">
+        <MappingFragment StoreEntitySet="ArabaMotor_">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MotorAdi" ColumnName="MotorAdi" />
+          <ScalarProperty Name="OrjinalBeygir" ColumnName="OrjinalBeygir" />
+          <ScalarProperty Name="YeniBeygir" ColumnName="YeniBeygir" />
+          <ScalarProperty Name="OrjinalTork" ColumnName="OrjinalTork" />
+          <ScalarProperty Name="YeniTork" ColumnName="YeniTork" />
+          <ScalarProperty Name="YilID" ColumnName="YilID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="YakitTip" ColumnName="YakitTip" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="arabamarkamodel" FunctionName="hpchiptuningDBModel1.Store.arabamarkamodel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hpchiptuningDBModel1.arabamarkamodel_Result">
+          <ScalarProperty Name="MarkaAdi" ColumnName="MarkaAdi" />
+          <ScalarProperty Name="ModelAdi" ColumnName="ModelAdi" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="arabamm" FunctionName="hpchiptuningDBModel1.Store.arabamm">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hpchiptuningDBModel1.arabamm_Result">
+          <ScalarProperty Name="MarkaAdi" ColumnName="MarkaAdi" />
+          <ScalarProperty Name="ModelAdi" ColumnName="ModelAdi" />
+          <ScalarProperty Name="MarkaID" ColumnName="MarkaID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="resim" ColumnName="resim" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="bayipromosyontalepgor" FunctionName="hpchiptuningDBModel1.Store.bayipromosyontalepgor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hpchiptuningDBModel1.bayipromosyontalepgor_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunTip" ColumnName="urunTip" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="talepTarihi" ColumnName="talepTarihi" />
+          <ScalarProperty Name="gonderilmeTarihi" ColumnName="gonderilmeTarihi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="fiyattoplam" FunctionName="hpchiptuningDBModel1.Store.fiyattoplam" />
+    <FunctionImportMapping FunctionImportName="gonderilenpromosyonlar" FunctionName="hpchiptuningDBModel1.Store.gonderilenpromosyonlar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hpchiptuningDBModel1.gonderilenpromosyonlar_Result">
+          <ScalarProperty Name="bayiAdi" ColumnName="bayiAdi" />
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="bid" ColumnName="bid" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunTip" ColumnName="urunTip" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="talepTarihi" ColumnName="talepTarihi" />
+          <ScalarProperty Name="gonderilmeTarihi" ColumnName="gonderilmeTarihi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="gonderilenpromosyontalepgor" FunctionName="hpchiptuningDBModel1.Store.gonderilenpromosyontalepgor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hpchiptuningDBModel1.gonderilenpromosyontalepgor_Result">
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="bid" ColumnName="bid" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunTip" ColumnName="urunTip" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="talepTarihi" ColumnName="talepTarihi" />
+          <ScalarProperty Name="gonderilmeTarihi" ColumnName="gonderilmeTarihi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="mesajgonder" FunctionName="hpchiptuningDBModel1.Store.mesajgonder" />
+    <FunctionImportMapping FunctionImportName="musteriyorumgetir" FunctionName="hpchiptuningDBModel1.Store.musteriyorumgetir">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hpchiptuningDBModel1.musteriyorumgetir_Result">
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="adSoyad" ColumnName="adSoyad" />
+          <ScalarProperty Name="arac" ColumnName="arac" />
+          <ScalarProperty Name="aracbilgi" ColumnName="aracbilgi" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="yorum" ColumnName="yorum" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="musteriyorumgetir2" FunctionName="hpchiptuningDBModel1.Store.musteriyorumgetir2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hpchiptuningDBModel1.musteriyorumgetir2_Result">
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="adSoyad" ColumnName="adSoyad" />
+          <ScalarProperty Name="arac" ColumnName="arac" />
+          <ScalarProperty Name="aracbilgi" ColumnName="aracbilgi" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="markaID" ColumnName="markaID" />
+          <ScalarProperty Name="modelID" ColumnName="modelID" />
+          <ScalarProperty Name="yorum" ColumnName="yorum" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="musteriyorumgetir3" FunctionName="hpchiptuningDBModel1.Store.musteriyorumgetir3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hpchiptuningDBModel1.musteriyorumgetir3_Result">
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="adSoyad" ColumnName="adSoyad" />
+          <ScalarProperty Name="arac" ColumnName="arac" />
+          <ScalarProperty Name="aracbilgi" ColumnName="aracbilgi" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+          <ScalarProperty Name="markaID" ColumnName="markaID" />
+          <ScalarProperty Name="modelID" ColumnName="modelID" />
+          <ScalarProperty Name="yorum" ColumnName="yorum" />
+          <ScalarProperty Name="resimm" ColumnName="resimm" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="promosyontalepgor" FunctionName="hpchiptuningDBModel1.Store.promosyontalepgor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hpchiptuningDBModel1.promosyontalepgor_Result">
+          <ScalarProperty Name="bayiAdi" ColumnName="bayiAdi" />
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="bid" ColumnName="bid" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunTip" ColumnName="urunTip" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="talepTarihi" ColumnName="talepTarihi" />
+          <ScalarProperty Name="gonderilmeTarihi" ColumnName="gonderilmeTarihi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="promosyonuruntipinegoregetir" FunctionName="hpchiptuningDBModel1.Store.promosyonuruntipinegoregetir">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hpchiptuningDBModel1.promosyonuruntipinegoregetir_Result">
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="bid" ColumnName="bid" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunTip" ColumnName="urunTip" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="talepTarihi" ColumnName="talepTarihi" />
+          <ScalarProperty Name="gonderilmeTarihi" ColumnName="gonderilmeTarihi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="promosyonuruntipinegoregetir2" FunctionName="hpchiptuningDBModel1.Store.promosyonuruntipinegoregetir2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hpchiptuningDBModel1.promosyonuruntipinegoregetir2_Result">
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="bid" ColumnName="bid" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunTip" ColumnName="urunTip" />
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="talepTarihi" ColumnName="talepTarihi" />
+          <ScalarProperty Name="gonderilmeTarihi" ColumnName="gonderilmeTarihi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

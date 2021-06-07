@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hpchiptuningDBModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ArabaMarka">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriID" Type="float" />
+    <Property Name="MarkaAdi" Type="nvarchar" MaxLength="255" />
+    <Property Name="Resim" Type="nvarchar" MaxLength="255" />
+    <Property Name="Stage2" Type="float" />
+    <Property Name="AktifMi" Type="bit" />
+  </EntityType>
+  <EntityType Name="ArabaMarkaeski_">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriID" Type="float" />
+    <Property Name="MarkaAdi" Type="nvarchar" MaxLength="255" />
+    <Property Name="Resim" Type="nvarchar" MaxLength="255" />
+    <Property Name="Stage2" Type="float" />
+    <Property Name="AktifMi" Type="bit" />
+  </EntityType>
+  <EntityType Name="ArabaModel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModelAdi" Type="nvarchar" MaxLength="255" />
+    <Property Name="MarkaID" Type="int" />
+    <Property Name="AktifMi" Type="bit" />
+    <Property Name="resim" Type="varchar" MaxLength="550" />
+  </EntityType>
+  <EntityType Name="ArabaModeleski_">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModelAdi" Type="nvarchar" MaxLength="255" />
+    <Property Name="MarkaID" Type="int" />
+    <Property Name="AktifMi" Type="bit" />
+    <Property Name="resim" Type="varchar" MaxLength="550" />
+  </EntityType>
+  <EntityType Name="ArabaMotor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MotorAdi" Type="nvarchar" MaxLength="255" />
+    <Property Name="OrjinalBeygir" Type="float" />
+    <Property Name="YeniBeygir" Type="float" />
+    <Property Name="OrjinalTork" Type="float" />
+    <Property Name="YeniTork" Type="float" />
+    <Property Name="YilID" Type="float" />
+    <Property Name="ModelID" Type="float" />
+    <Property Name="YakitTip" Type="float" />
+    <Property Name="AktifMi" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'hpchiptuningDB.dbo.ArabaMotor_' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ArabaMotor_">
+    <Key>
+      <PropertyRef Name="AktifMi" />
+    </Key>
+    <Property Name="Id" Type="float" />
+    <Property Name="MotorAdi" Type="nvarchar" MaxLength="255" />
+    <Property Name="OrjinalBeygir" Type="float" />
+    <Property Name="YeniBeygir" Type="float" />
+    <Property Name="OrjinalTork" Type="float" />
+    <Property Name="YeniTork" Type="float" />
+    <Property Name="YilID" Type="float" />
+    <Property Name="ModelID" Type="float" />
+    <Property Name="YakitTip" Type="float" />
+    <Property Name="AktifMi" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ArabaMotorEditsiz">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MotorAdi" Type="varchar" MaxLength="250" />
+    <Property Name="OrjinalBeygir" Type="varchar" MaxLength="50" />
+    <Property Name="YeniBeygir" Type="float" />
+    <Property Name="OrjinalTork" Type="float" />
+    <Property Name="YeniTork" Type="float" />
+    <Property Name="YilID" Type="float" />
+    <Property Name="ModelID" Type="float" />
+    <Property Name="YakitTip" Type="float" />
+    <Property Name="AktifMi" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'hpchiptuningDB.dbo.ArabaMotors' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ArabaMotors">
+          <Property Name="Id" Type="int" />
+          <Property Name="MotorAdi" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrjinalBeygir" Type="float" />
+          <Property Name="YeniBeygir" Type="float" />
+          <Property Name="OrjinalTork" Type="float" />
+          <Property Name="YeniTork" Type="float" />
+          <Property Name="YilID" Type="float" />
+          <Property Name="ModelID" Type="float" />
+          <Property Name="YakitTip" Type="float" />
+          <Property Name="AktifMi" Type="float" />
+        </EntityType>-->
+  <EntityType Name="ArabaMotorSON">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MotorAdi" Type="nvarchar" MaxLength="255" />
+    <Property Name="OrjinalBeygir" Type="float" />
+    <Property Name="YeniBeygir" Type="float" />
+    <Property Name="OrjinalTork" Type="float" />
+    <Property Name="YeniTork" Type="float" />
+    <Property Name="YilID" Type="float" />
+    <Property Name="ModelID" Type="float" />
+    <Property Name="YakitTip" Type="float" />
+    <Property Name="AktifMi" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'hpchiptuningDB.dbo.ArabaMotort' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ArabaMotort">
+          <Property Name="Id" Type="float" />
+          <Property Name="MotorAdi" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrjinalBeygir" Type="float" />
+          <Property Name="YeniBeygir" Type="float" />
+          <Property Name="OrjinalTork" Type="float" />
+          <Property Name="YeniTork" Type="float" />
+          <Property Name="YilID" Type="float" />
+          <Property Name="ModelID" Type="float" />
+          <Property Name="YakitTip" Type="float" />
+          <Property Name="AktifMi" Type="float" />
+        </EntityType>-->
+  <EntityType Name="ArabaYil">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adi" Type="nvarchar" MaxLength="255" />
+    <Property Name="ModelID" Type="float" />
+    <Property Name="Aktif" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ArabaYil_">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adi" Type="nvarchar" MaxLength="255" />
+    <Property Name="ModelID" Type="float" />
+    <Property Name="Aktif" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BasvuruSayfasi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Soyad" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefon" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nchar" MaxLength="50" />
+    <Property Name="PostaKodu" Type="nchar" MaxLength="10" />
+    <Property Name="Sehir" Type="nchar" MaxLength="20" />
+    <Property Name="Mahalle" Type="nchar" MaxLength="20" />
+    <Property Name="Apartman" Type="nchar" MaxLength="30" />
+    <Property Name="Tanıtım" Type="nchar" MaxLength="100" />
+    <Property Name="Cv" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="bayiler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bayiAdi" Type="varchar" MaxLength="250" />
+    <Property Name="bayiIl" Type="varchar" MaxLength="30" />
+    <Property Name="bayiNumarasi" Type="varchar" MaxLength="50" />
+    <Property Name="bayiKulad" Type="varchar" MaxLength="50" />
+    <Property Name="bayiSifre" Type="varchar" MaxLength="50" />
+    <Property Name="resim" Type="varchar" MaxLength="550" />
+  </EntityType>
+  <EntityType Name="bayimusterileri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adSoyad" Type="varchar" MaxLength="150" />
+    <Property Name="email" Type="varchar" MaxLength="150" />
+    <Property Name="telefon" Type="varchar" MaxLength="50" />
+    <Property Name="sehir" Type="varchar" MaxLength="50" />
+    <Property Name="aracPlaka" Type="varchar" MaxLength="20" />
+    <Property Name="aracBilgi" Type="varchar" MaxLength="250" />
+    <Property Name="bayiId" Type="int" />
+  </EntityType>
+  <EntityType Name="benzinchipuygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="yazi" Type="varchar" MaxLength="3500" />
+    <Property Name="resim" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="benzinliAraclar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="yazi" Type="varchar" MaxLength="3500" />
+    <Property Name="resim" Type="varchar" MaxLength="250" />
+    <Property Name="yolu" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="benzinliuygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="yazi" Type="varchar" MaxLength="3500" />
+    <Property Name="resim" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="boxuygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="yazi" Type="varchar" MaxLength="3500" />
+    <Property Name="resim" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="chiptuning">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="icerik" Type="varchar" MaxLength="3550" />
+    <Property Name="resim" Type="varchar" MaxLength="350" />
+  </EntityType>
+  <EntityType Name="chipyazilimiuygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="yazi" Type="varchar" MaxLength="3500" />
+    <Property Name="resim" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="dizelAraclar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="yazi" Type="varchar" MaxLength="3500" />
+    <Property Name="resim" Type="varchar" MaxLength="250" />
+    <Property Name="yolu" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="dizeluygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="yazi" Type="varchar" MaxLength="3500" />
+    <Property Name="resim" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="dosyaTalep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aracMarka" Type="varchar" MaxLength="50" />
+    <Property Name="aracModel" Type="varchar" MaxLength="50" />
+    <Property Name="aracMotor" Type="varchar" MaxLength="50" />
+    <Property Name="aracPlaka" Type="varchar" MaxLength="50" />
+    <Property Name="stage1" Type="varchar" MaxLength="50" />
+    <Property Name="stage2" Type="varchar" MaxLength="50" />
+    <Property Name="stage3" Type="varchar" MaxLength="50" />
+    <Property Name="dpfDelete" Type="varchar" MaxLength="5" />
+    <Property Name="vmaxOff" Type="varchar" MaxLength="5" />
+    <Property Name="dtcOff" Type="varchar" MaxLength="5" />
+    <Property Name="addblueDelete" Type="varchar" MaxLength="5" />
+    <Property Name="hizLimitorDelete" Type="varchar" MaxLength="5" />
+    <Property Name="egrDelete" Type="varchar" MaxLength="5" />
+    <Property Name="notu" Type="varchar" MaxLength="500" />
+    <Property Name="yuklemeTarihi" Type="varchar" MaxLength="50" />
+    <Property Name="yuklemeSaati" Type="varchar" MaxLength="50" />
+    <Property Name="dosya" Type="varchar" MaxLength="250" />
+    <Property Name="durum" Type="varchar" MaxLength="50" />
+    <Property Name="bayiAdi" Type="varchar" MaxLength="150" />
+    <Property Name="bayiID" Type="varchar" MaxLength="10" />
+    <Property Name="modludosya" Type="varchar" MaxLength="250" />
+    <Property Name="modTarihi" Type="varchar" MaxLength="50" />
+    <Property Name="modSaati" Type="varchar" MaxLength="50" />
+    <Property Name="fiyat" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ebulten">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mail" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="ekibimizSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="yazi" Type="varchar" MaxLength="540" />
+    <Property Name="resim" Type="varchar" MaxLength="540" />
+    <Property Name="yolu" Type="varchar" MaxLength="540" />
+  </EntityType>
+  <EntityType Name="fotogaleri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="300" />
+    <Property Name="yazi" Type="varchar" MaxLength="500" />
+    <Property Name="resim" Type="varchar" MaxLength="3500" />
+  </EntityType>
+  <EntityType Name="gelenmesajlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="250" />
+    <Property Name="icerik" Type="text" />
+    <Property Name="tarih" Type="varchar" MaxLength="50" />
+    <Property Name="gonderen" Type="varchar" MaxLength="150" />
+    <Property Name="alici" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="gidenmesajlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="250" />
+    <Property Name="icerik" Type="text" />
+    <Property Name="tarih" Type="varchar" MaxLength="50" />
+    <Property Name="gonderen" Type="varchar" MaxLength="150" />
+    <Property Name="alici" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="haberlerSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="500" />
+    <Property Name="icerik" Type="text" />
+    <Property Name="resim" Type="varchar" MaxLength="500" />
+    <Property Name="tarih" Type="varchar" MaxLength="100" />
+    <Property Name="yolu" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="hakkimizdaSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="200" />
+    <Property Name="yazi" Type="text" />
+  </EntityType>
+  <EntityType Name="iletisimFormu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adsoyad" Type="varchar" MaxLength="150" />
+    <Property Name="mesaj" Type="varchar" MaxLength="500" />
+    <Property Name="tarih" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="iletisimSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="adres" Type="varchar" MaxLength="250" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="telefon" Type="varchar" MaxLength="150" />
+    <Property Name="map" Type="varchar" MaxLength="750" />
+  </EntityType>
+  <EntityType Name="iller">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Plaka" Type="smallint" Nullable="false" />
+    <Property Name="SehirAd" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="instagramsube">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subeid" Type="int" />
+    <Property Name="resim" Type="varchar" MaxLength="450" />
+  </EntityType>
+  <EntityType Name="mesajlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="icerik" Type="text" />
+    <Property Name="gonderen" Type="varchar" MaxLength="150" />
+    <Property Name="alici" Type="varchar" MaxLength="150" />
+    <Property Name="tarih" Type="datetime" />
+  </EntityType>
+  <EntityType Name="misyonumuzSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="250" />
+    <Property Name="yazi" Type="varchar" MaxLength="1500" />
+  </EntityType>
+  <EntityType Name="musteriyorumlari">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="adSoyad" Type="varchar" MaxLength="250" />
+    <Property Name="arac" Type="varchar" MaxLength="150" />
+    <Property Name="aracbilgi" Type="varchar" MaxLength="250" />
+    <Property Name="tarih" Type="varchar" MaxLength="50" />
+    <Property Name="yorum" Type="varchar" MaxLength="350" />
+    <Property Name="markaID" Type="int" />
+    <Property Name="resimm" Type="varchar" MaxLength="540" />
+    <Property Name="yolu" Type="varchar" MaxLength="540" />
+    <Property Name="modelID" Type="varchar" MaxLength="50" />
+    <Property Name="durum" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="panel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kulad" Type="varchar" MaxLength="150" />
+    <Property Name="sifre" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="pedaluygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="yazi" Type="varchar" MaxLength="3500" />
+    <Property Name="resim" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="promosyonlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunAd" Type="varchar" MaxLength="250" />
+    <Property Name="urunAdet" Type="varchar" MaxLength="50" />
+    <Property Name="urunTip" Type="varchar" MaxLength="50" />
+    <Property Name="durum" Type="varchar" MaxLength="50" />
+    <Property Name="resim" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="promosyontalep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunid" Type="varchar" MaxLength="50" />
+    <Property Name="adet" Type="varchar" MaxLength="50" />
+    <Property Name="durum" Type="varchar" MaxLength="50" />
+    <Property Name="taleptarihi" Type="varchar" MaxLength="50" />
+    <Property Name="gonderilmetarihi" Type="varchar" MaxLength="50" />
+    <Property Name="bayiID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="raporlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bayiKulad" Type="varchar" MaxLength="150" />
+    <Property Name="islem" Type="varchar" MaxLength="520" />
+    <Property Name="islemtarihi" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="referanslarSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="250" />
+    <Property Name="yazi" Type="varchar" MaxLength="250" />
+    <Property Name="resim" Type="varchar" MaxLength="250" />
+    <Property Name="yolu" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="slider">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="250" />
+    <Property Name="yazi" Type="varchar" MaxLength="250" />
+    <Property Name="resim1" Type="varchar" MaxLength="250" />
+    <Property Name="resim2" Type="varchar" MaxLength="250" />
+    <Property Name="link" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="sms">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mesaj" Type="text" />
+    <Property Name="tarih" Type="varchar" MaxLength="150" />
+    <Property Name="numaralar" Type="text" />
+    <Property Name="gonderenBayi" Type="varchar" MaxLength="520" />
+  </EntityType>
+  <EntityType Name="sorular">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="soru" Type="nchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sssSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="1250" />
+    <Property Name="yazi" Type="varchar" MaxLength="1450" />
+  </EntityType>
+  <EntityType Name="sssSayfasie">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="1250" />
+    <Property Name="yazi" Type="varchar" MaxLength="1450" />
+  </EntityType>
+  <EntityType Name="sssSayfasiu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="1250" />
+    <Property Name="yazi" Type="varchar" MaxLength="1450" />
+  </EntityType>
+  <EntityType Name="subeler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subeAdi" Type="varchar" MaxLength="550" />
+    <Property Name="yetkiliAdSoyad" Type="varchar" MaxLength="60" />
+    <Property Name="tel1" Type="varchar" MaxLength="50" />
+    <Property Name="tel2" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="550" />
+    <Property Name="adres" Type="varchar" MaxLength="550" />
+    <Property Name="mapkodu" Type="varchar" MaxLength="550" />
+    <Property Name="suberesim" Type="varchar" MaxLength="550" />
+    <Property Name="suberesimyol" Type="varchar" MaxLength="550" />
+    <Property Name="calismaSaat" Type="varchar" MaxLength="550" />
+    <Property Name="plakaKodu" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="torkvegucartisi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="150" />
+    <Property Name="yazi" Type="varchar" MaxLength="3500" />
+    <Property Name="resim" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tumarabaresimler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="resim" Type="varchar" MaxLength="350" />
+    <Property Name="modelID" Type="int" />
+  </EntityType>
+  <EntityType Name="tuningliaraclar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="marka" Type="varchar" MaxLength="150" />
+    <Property Name="model" Type="varchar" MaxLength="150" />
+    <Property Name="orjbeygir" Type="varchar" MaxLength="50" />
+    <Property Name="orjtork" Type="varchar" MaxLength="50" />
+    <Property Name="kbeygir" Type="varchar" MaxLength="50" />
+    <Property Name="ktork" Type="varchar" MaxLength="50" />
+    <Property Name="resim" Type="varchar" MaxLength="350" />
+    <Property Name="yolu" Type="varchar" MaxLength="350" />
+    <Property Name="yakit" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="videogaleri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="350" />
+    <Property Name="yazi" Type="varchar" MaxLength="500" />
+    <Property Name="url" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="vizyonumuzSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="baslik" Type="varchar" MaxLength="250" />
+    <Property Name="yazi" Type="varchar" MaxLength="1500" />
+  </EntityType>
+  <EntityType Name="y">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MotorAdi" Type="nvarchar" MaxLength="255" />
+    <Property Name="OrjinalBeygir" Type="float" />
+    <Property Name="YeniBeygir" Type="float" />
+    <Property Name="OrjinalTork" Type="float" />
+    <Property Name="YeniTork" Type="float" />
+    <Property Name="YilID" Type="float" />
+    <Property Name="ModelID" Type="float" />
+    <Property Name="YakitTip" Type="float" />
+    <Property Name="AktifMi" Type="float" />
+  </EntityType>
+  <EntityType Name="YagmurArabaMotor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MotorAdi" Type="nvarchar" MaxLength="255" />
+    <Property Name="OrjinalBeygir" Type="float" />
+    <Property Name="YeniBeygir" Type="float" />
+    <Property Name="OrjinalTork" Type="float" />
+    <Property Name="YeniTork" Type="float" />
+    <Property Name="YilID" Type="float" />
+    <Property Name="ModelID" Type="float" />
+    <Property Name="YakitTip" Type="float" />
+    <Property Name="AktifMi" Type="float" />
+  </EntityType>
+  <Function Name="arabamarkamodel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="arabamm" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="bayipromosyontalepgor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fiyattoplam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="gonderilenpromosyonlar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="gonderilenpromosyontalepgor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="mesajgonder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="baslik" Type="varchar" Mode="In" />
+    <Parameter Name="icerik" Type="varchar" Mode="In" />
+    <Parameter Name="gonderen" Type="varchar" Mode="In" />
+    <Parameter Name="alici" Type="varchar" Mode="In" />
+    <Parameter Name="tarih" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="musteriyorumgetir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="musteriyorumgetir2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="musteriyorumgetir3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="promosyontalepgor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="promosyonuruntipinegoregetir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tip" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="promosyonuruntipinegoregetir2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tip" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="hpchiptuningDBModel2StoreContainer">
+    <EntitySet Name="ArabaMarka" EntityType="Self.ArabaMarka" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArabaMarkaeski_" EntityType="Self.ArabaMarkaeski_" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArabaModel" EntityType="Self.ArabaModel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArabaModeleski_" EntityType="Self.ArabaModeleski_" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArabaMotor" EntityType="Self.ArabaMotor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArabaMotorEditsiz" EntityType="Self.ArabaMotorEditsiz" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArabaMotorSON" EntityType="Self.ArabaMotorSON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArabaYil" EntityType="Self.ArabaYil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArabaYil_" EntityType="Self.ArabaYil_" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BasvuruSayfasi" EntityType="Self.BasvuruSayfasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bayiler" EntityType="Self.bayiler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bayimusterileri" EntityType="Self.bayimusterileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="benzinchipuygulamasi" EntityType="Self.benzinchipuygulamasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="benzinliAraclar" EntityType="Self.benzinliAraclar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="benzinliuygulamasi" EntityType="Self.benzinliuygulamasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="boxuygulamasi" EntityType="Self.boxuygulamasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="chiptuning" EntityType="Self.chiptuning" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="chipyazilimiuygulamasi" EntityType="Self.chipyazilimiuygulamasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dizelAraclar" EntityType="Self.dizelAraclar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dizeluygulamasi" EntityType="Self.dizeluygulamasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dosyaTalep" EntityType="Self.dosyaTalep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ebulten" EntityType="Self.ebulten" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ekibimizSayfasi" EntityType="Self.ekibimizSayfasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="fotogaleri" EntityType="Self.fotogaleri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gelenmesajlar" EntityType="Self.gelenmesajlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gidenmesajlar" EntityType="Self.gidenmesajlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="haberlerSayfasi" EntityType="Self.haberlerSayfasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hakkimizdaSayfasi" EntityType="Self.hakkimizdaSayfasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iletisimFormu" EntityType="Self.iletisimFormu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iletisimSayfasi" EntityType="Self.iletisimSayfasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iller" EntityType="Self.iller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="instagramsube" EntityType="Self.instagramsube" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mesajlar" EntityType="Self.mesajlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="misyonumuzSayfasi" EntityType="Self.misyonumuzSayfasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="musteriyorumlari" EntityType="Self.musteriyorumlari" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="panel" EntityType="Self.panel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pedaluygulamasi" EntityType="Self.pedaluygulamasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="promosyonlar" EntityType="Self.promosyonlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="promosyontalep" EntityType="Self.promosyontalep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="raporlar" EntityType="Self.raporlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="referanslarSayfasi" EntityType="Self.referanslarSayfasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="slider" EntityType="Self.slider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sms" EntityType="Self.sms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sorular" EntityType="Self.sorular" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sssSayfasi" EntityType="Self.sssSayfasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sssSayfasie" EntityType="Self.sssSayfasie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sssSayfasiu" EntityType="Self.sssSayfasiu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="subeler" EntityType="Self.subeler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="torkvegucartisi" EntityType="Self.torkvegucartisi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tumarabaresimler" EntityType="Self.tumarabaresimler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tuningliaraclar" EntityType="Self.tuningliaraclar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="videogaleri" EntityType="Self.videogaleri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vizyonumuzSayfasi" EntityType="Self.vizyonumuzSayfasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="y" EntityType="Self.y" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="YagmurArabaMotor" EntityType="Self.YagmurArabaMotor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArabaMotor_" EntityType="Self.ArabaMotor_" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ArabaMotor_].[Id] AS [Id], 
+    [ArabaMotor_].[MotorAdi] AS [MotorAdi], 
+    [ArabaMotor_].[OrjinalBeygir] AS [OrjinalBeygir], 
+    [ArabaMotor_].[YeniBeygir] AS [YeniBeygir], 
+    [ArabaMotor_].[OrjinalTork] AS [OrjinalTork], 
+    [ArabaMotor_].[YeniTork] AS [YeniTork], 
+    [ArabaMotor_].[YilID] AS [YilID], 
+    [ArabaMotor_].[ModelID] AS [ModelID], 
+    [ArabaMotor_].[YakitTip] AS [YakitTip], 
+    [ArabaMotor_].[AktifMi] AS [AktifMi]
+    FROM [dbo].[ArabaMotor_] AS [ArabaMotor_]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

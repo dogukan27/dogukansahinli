@@ -1,0 +1,100 @@
+﻿@model tuning.ViewModels.AboutModel
+@{
+    ViewBag.Title = "EditAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>EditAbout</h2>
+
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Misyon)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Misyon)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.yazi)
+        </td>
+        <td style="width:270px;">
+            @Html.ActionLink("Edit", "EditMisyon", new { id = item.id }, new { @class = "btn btn-success" })
+
+        </td>
+    </tr>
+        }
+
+    </table>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Vizyon)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Vizyon)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.yazi)
+        </td>
+
+        <td style="width:270px;">
+            @Html.ActionLink("Edit", "EditVizyon", new { id = item.id }, new { @class = "btn btn-success" })
+
+        </td>
+    </tr>
+        }
+
+    </table>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Hakkinda)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Hakkinda)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.yazi)
+        </td>
+
+        <td style="width:270px;">
+            @Html.ActionLink("Edit", "EditHak", new { id = item.id }, new { @class = "btn btn-success" })
+
+        </td>
+
+    </tr>
+        }
+
+    </table>
+
+   
+</div>

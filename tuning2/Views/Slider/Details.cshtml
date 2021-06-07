@@ -1,0 +1,59 @@
+﻿@model tuning.Models.slider
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>slider</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.baslik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.baslik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.yazi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.yazi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.resim1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resim1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.resim2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resim2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.link)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

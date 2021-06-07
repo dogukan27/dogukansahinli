@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hpchiptuningDBModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ArabaMarka">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KategoriID" Type="Double" />
+    <Property Name="MarkaAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Stage2" Type="Double" />
+    <Property Name="AktifMi" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ArabaMarkaeski_">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KategoriID" Type="Double" />
+    <Property Name="MarkaAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Stage2" Type="Double" />
+    <Property Name="AktifMi" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ArabaModel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModelAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MarkaID" Type="Int32" />
+    <Property Name="AktifMi" Type="Boolean" />
+    <Property Name="resim" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ArabaModeleski_">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModelAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MarkaID" Type="Int32" />
+    <Property Name="AktifMi" Type="Boolean" />
+    <Property Name="resim" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ArabaMotor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MotorAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OrjinalBeygir" Type="Double" />
+    <Property Name="YeniBeygir" Type="Double" />
+    <Property Name="OrjinalTork" Type="Double" />
+    <Property Name="YeniTork" Type="Double" />
+    <Property Name="YilID" Type="Double" />
+    <Property Name="ModelID" Type="Double" />
+    <Property Name="YakitTip" Type="Double" />
+    <Property Name="AktifMi" Type="Double" />
+  </EntityType>
+  <EntityType Name="ArabaMotorEditsiz">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MotorAdi" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="OrjinalBeygir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="YeniBeygir" Type="Double" />
+    <Property Name="OrjinalTork" Type="Double" />
+    <Property Name="YeniTork" Type="Double" />
+    <Property Name="YilID" Type="Double" />
+    <Property Name="ModelID" Type="Double" />
+    <Property Name="YakitTip" Type="Double" />
+    <Property Name="AktifMi" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ArabaMotorSON">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MotorAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OrjinalBeygir" Type="Double" />
+    <Property Name="YeniBeygir" Type="Double" />
+    <Property Name="OrjinalTork" Type="Double" />
+    <Property Name="YeniTork" Type="Double" />
+    <Property Name="YilID" Type="Double" />
+    <Property Name="ModelID" Type="Double" />
+    <Property Name="YakitTip" Type="Double" />
+    <Property Name="AktifMi" Type="Double" />
+  </EntityType>
+  <EntityType Name="ArabaYil">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ModelID" Type="Double" />
+    <Property Name="Aktif" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ArabaYil_">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ModelID" Type="Double" />
+    <Property Name="Aktif" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BasvuruSayfasi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="PostaKodu" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Sehir" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Mahalle" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="Apartman" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Tanıtım" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Cv" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="bayiler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bayiAdi" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="bayiIl" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="bayiNumarasi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bayiKulad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bayiSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="bayimusterileri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adSoyad" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sehir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aracPlaka" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="aracBilgi" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="bayiId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="benzinchipuygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="3500" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="benzinliAraclar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="3500" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="yolu" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="benzinliuygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="3500" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="boxuygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="3500" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="chiptuning">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="icerik" Type="String" MaxLength="3550" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="chipyazilimiuygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="3500" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dizelAraclar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="3500" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="yolu" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dizeluygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="3500" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dosyaTalep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="aracMarka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aracModel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aracMotor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aracPlaka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stage1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stage2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="stage3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dpfDelete" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="vmaxOff" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="dtcOff" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="addblueDelete" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="hizLimitorDelete" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="egrDelete" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="notu" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="yuklemeTarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="yuklemeSaati" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dosya" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="durum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bayiAdi" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="bayiID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="modludosya" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="modTarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="modSaati" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ebulten">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mail" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ekibimizSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="540" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="540" FixedLength="false" Unicode="false" />
+    <Property Name="yolu" Type="String" MaxLength="540" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="fotogaleri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="3500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="gelenmesajlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gonderen" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="alici" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="gidenmesajlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gonderen" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="alici" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="haberlerSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="yolu" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="hakkimizdaSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="iletisimFormu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adsoyad" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="mesaj" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="iletisimSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="adres" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefon" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="map" Type="String" MaxLength="750" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="iller">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Plaka" Type="Int16" Nullable="false" />
+    <Property Name="SehirAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="instagramsube">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="subeid" Type="Int32" />
+    <Property Name="resim" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="mesajlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="gonderen" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="alici" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="misyonumuzSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="musteriyorumlari">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adSoyad" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="arac" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="aracbilgi" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="yorum" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="markaID" Type="Int32" />
+    <Property Name="resimm" Type="String" MaxLength="540" FixedLength="false" Unicode="false" />
+    <Property Name="yolu" Type="String" MaxLength="540" FixedLength="false" Unicode="false" />
+    <Property Name="modelID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="durum" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="panel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kulad" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="sifre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pedaluygulamasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="3500" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="promosyonlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="urunAd" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="urunAdet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="urunTip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="durum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="promosyontalep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="urunid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="adet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="durum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="taleptarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gonderilmetarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bayiID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="raporlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bayiKulad" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="islem" Type="String" MaxLength="520" FixedLength="false" Unicode="false" />
+    <Property Name="islemtarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="referanslarSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="yolu" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="slider">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="resim1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="resim2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="link" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mesaj" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tarih" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="numaralar" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="gonderenBayi" Type="String" MaxLength="520" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sorular">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="soru" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sssSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="1250" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="1450" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sssSayfasie">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="1250" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="1450" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sssSayfasiu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="1250" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="1450" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="subeler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="subeAdi" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+    <Property Name="yetkiliAdSoyad" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="tel1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tel2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+    <Property Name="adres" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+    <Property Name="mapkodu" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+    <Property Name="suberesim" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+    <Property Name="suberesimyol" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+    <Property Name="calismaSaat" Type="String" MaxLength="550" FixedLength="false" Unicode="false" />
+    <Property Name="plakaKodu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="torkvegucartisi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="3500" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tumarabaresimler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resim" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="modelID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tuningliaraclar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="marka" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="model" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="orjbeygir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="orjtork" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="kbeygir" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ktork" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="resim" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="yolu" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="yakit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="videogaleri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vizyonumuzSayfasi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="yazi" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="y">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MotorAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OrjinalBeygir" Type="Double" />
+    <Property Name="YeniBeygir" Type="Double" />
+    <Property Name="OrjinalTork" Type="Double" />
+    <Property Name="YeniTork" Type="Double" />
+    <Property Name="YilID" Type="Double" />
+    <Property Name="ModelID" Type="Double" />
+    <Property Name="YakitTip" Type="Double" />
+    <Property Name="AktifMi" Type="Double" />
+  </EntityType>
+  <EntityType Name="YagmurArabaMotor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MotorAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OrjinalBeygir" Type="Double" />
+    <Property Name="YeniBeygir" Type="Double" />
+    <Property Name="OrjinalTork" Type="Double" />
+    <Property Name="YeniTork" Type="Double" />
+    <Property Name="YilID" Type="Double" />
+    <Property Name="ModelID" Type="Double" />
+    <Property Name="YakitTip" Type="Double" />
+    <Property Name="AktifMi" Type="Double" />
+  </EntityType>
+  <EntityType Name="ArabaMotor_">
+    <Key>
+      <PropertyRef Name="AktifMi" />
+    </Key>
+    <Property Name="Id" Type="Double" />
+    <Property Name="MotorAdi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OrjinalBeygir" Type="Double" />
+    <Property Name="YeniBeygir" Type="Double" />
+    <Property Name="OrjinalTork" Type="Double" />
+    <Property Name="YeniTork" Type="Double" />
+    <Property Name="YilID" Type="Double" />
+    <Property Name="ModelID" Type="Double" />
+    <Property Name="YakitTip" Type="Double" />
+    <Property Name="AktifMi" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="hpchiptuningDBEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ArabaMarkas" EntityType="Self.ArabaMarka" />
+    <EntitySet Name="ArabaMarkaeski_" EntityType="Self.ArabaMarkaeski_" />
+    <EntitySet Name="ArabaModels" EntityType="Self.ArabaModel" />
+    <EntitySet Name="ArabaModeleski_" EntityType="Self.ArabaModeleski_" />
+    <EntitySet Name="ArabaMotors" EntityType="Self.ArabaMotor" />
+    <EntitySet Name="ArabaMotorEditsizs" EntityType="Self.ArabaMotorEditsiz" />
+    <EntitySet Name="ArabaMotorSONs" EntityType="Self.ArabaMotorSON" />
+    <EntitySet Name="ArabaYils" EntityType="Self.ArabaYil" />
+    <EntitySet Name="ArabaYil_" EntityType="Self.ArabaYil_" />
+    <EntitySet Name="BasvuruSayfasis" EntityType="Self.BasvuruSayfasi" />
+    <EntitySet Name="bayilers" EntityType="Self.bayiler" />
+    <EntitySet Name="bayimusterileris" EntityType="Self.bayimusterileri" />
+    <EntitySet Name="benzinchipuygulamasis" EntityType="Self.benzinchipuygulamasi" />
+    <EntitySet Name="benzinliAraclars" EntityType="Self.benzinliAraclar" />
+    <EntitySet Name="benzinliuygulamasis" EntityType="Self.benzinliuygulamasi" />
+    <EntitySet Name="boxuygulamasis" EntityType="Self.boxuygulamasi" />
+    <EntitySet Name="chiptunings" EntityType="Self.chiptuning" />
+    <EntitySet Name="chipyazilimiuygulamasis" EntityType="Self.chipyazilimiuygulamasi" />
+    <EntitySet Name="dizelAraclars" EntityType="Self.dizelAraclar" />
+    <EntitySet Name="dizeluygulamasis" EntityType="Self.dizeluygulamasi" />
+    <EntitySet Name="dosyaTaleps" EntityType="Self.dosyaTalep" />
+    <EntitySet Name="ebultens" EntityType="Self.ebulten" />
+    <EntitySet Name="ekibimizSayfasis" EntityType="Self.ekibimizSayfasi" />
+    <EntitySet Name="fotogaleris" EntityType="Self.fotogaleri" />
+    <EntitySet Name="gelenmesajlars" EntityType="Self.gelenmesajlar" />
+    <EntitySet Name="gidenmesajlars" EntityType="Self.gidenmesajlar" />
+    <EntitySet Name="haberlerSayfasis" EntityType="Self.haberlerSayfasi" />
+    <EntitySet Name="hakkimizdaSayfasis" EntityType="Self.hakkimizdaSayfasi" />
+    <EntitySet Name="iletisimFormus" EntityType="Self.iletisimFormu" />
+    <EntitySet Name="iletisimSayfasis" EntityType="Self.iletisimSayfasi" />
+    <EntitySet Name="illers" EntityType="Self.iller" />
+    <EntitySet Name="instagramsubes" EntityType="Self.instagramsube" />
+    <EntitySet Name="mesajlars" EntityType="Self.mesajlar" />
+    <EntitySet Name="misyonumuzSayfasis" EntityType="Self.misyonumuzSayfasi" />
+    <EntitySet Name="musteriyorumlaris" EntityType="Self.musteriyorumlari" />
+    <EntitySet Name="panels" EntityType="Self.panel" />
+    <EntitySet Name="pedaluygulamasis" EntityType="Self.pedaluygulamasi" />
+    <EntitySet Name="promosyonlars" EntityType="Self.promosyonlar" />
+    <EntitySet Name="promosyontaleps" EntityType="Self.promosyontalep" />
+    <EntitySet Name="raporlars" EntityType="Self.raporlar" />
+    <EntitySet Name="referanslarSayfasis" EntityType="Self.referanslarSayfasi" />
+    <EntitySet Name="sliders" EntityType="Self.slider" />
+    <EntitySet Name="sms" EntityType="Self.sm" />
+    <EntitySet Name="sorulars" EntityType="Self.sorular" />
+    <EntitySet Name="sssSayfasis" EntityType="Self.sssSayfasi" />
+    <EntitySet Name="sssSayfasies" EntityType="Self.sssSayfasie" />
+    <EntitySet Name="sssSayfasius" EntityType="Self.sssSayfasiu" />
+    <EntitySet Name="subelers" EntityType="Self.subeler" />
+    <EntitySet Name="torkvegucartisis" EntityType="Self.torkvegucartisi" />
+    <EntitySet Name="tumarabaresimlers" EntityType="Self.tumarabaresimler" />
+    <EntitySet Name="tuningliaraclars" EntityType="Self.tuningliaraclar" />
+    <EntitySet Name="videogaleris" EntityType="Self.videogaleri" />
+    <EntitySet Name="vizyonumuzSayfasis" EntityType="Self.vizyonumuzSayfasi" />
+    <EntitySet Name="y" EntityType="Self.y" />
+    <EntitySet Name="YagmurArabaMotors" EntityType="Self.YagmurArabaMotor" />
+    <EntitySet Name="ArabaMotor_" EntityType="Self.ArabaMotor_" />
+    <FunctionImport Name="arabamarkamodel" ReturnType="Collection(hpchiptuningDBModel2.arabamarkamodel_Result)" />
+    <FunctionImport Name="arabamm" ReturnType="Collection(hpchiptuningDBModel2.arabamm_Result)" />
+    <FunctionImport Name="bayipromosyontalepgor" ReturnType="Collection(hpchiptuningDBModel2.bayipromosyontalepgor_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="fiyattoplam" ReturnType="Collection(Decimal)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="gonderilenpromosyonlar" ReturnType="Collection(hpchiptuningDBModel2.gonderilenpromosyonlar_Result)" />
+    <FunctionImport Name="gonderilenpromosyontalepgor" ReturnType="Collection(hpchiptuningDBModel2.gonderilenpromosyontalepgor_Result)" />
+    <FunctionImport Name="mesajgonder">
+      <Parameter Name="baslik" Mode="In" Type="String" />
+      <Parameter Name="icerik" Mode="In" Type="String" />
+      <Parameter Name="gonderen" Mode="In" Type="String" />
+      <Parameter Name="alici" Mode="In" Type="String" />
+      <Parameter Name="tarih" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="musteriyorumgetir" ReturnType="Collection(hpchiptuningDBModel2.musteriyorumgetir_Result)" />
+    <FunctionImport Name="musteriyorumgetir2" ReturnType="Collection(hpchiptuningDBModel2.musteriyorumgetir2_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="musteriyorumgetir3" ReturnType="Collection(hpchiptuningDBModel2.musteriyorumgetir3_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="promosyontalepgor" ReturnType="Collection(hpchiptuningDBModel2.promosyontalepgor_Result)" />
+    <FunctionImport Name="promosyonuruntipinegoregetir" ReturnType="Collection(hpchiptuningDBModel2.promosyonuruntipinegoregetir_Result)">
+      <Parameter Name="tip" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="promosyonuruntipinegoregetir2" ReturnType="Collection(hpchiptuningDBModel2.promosyonuruntipinegoregetir2_Result)">
+      <Parameter Name="tip" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="arabamarkamodel_Result">
+    <Property Type="String" Name="MarkaAdi" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ModelAdi" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="resim" Nullable="true" MaxLength="550" />
+  </ComplexType>
+  <ComplexType Name="arabamm_Result">
+    <Property Type="String" Name="MarkaAdi" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ModelAdi" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="MarkaID" Nullable="true" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="resim" Nullable="true" MaxLength="550" />
+  </ComplexType>
+  <ComplexType Name="bayipromosyontalepgor_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="urunAd" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="urunTip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="durum" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="talepTarihi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="gonderilmeTarihi" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="gonderilenpromosyonlar_Result">
+    <Property Type="String" Name="bayiAdi" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="pid" Nullable="false" />
+    <Property Type="String" Name="bid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="urunAd" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="urunTip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="durum" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="talepTarihi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="gonderilmeTarihi" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="gonderilenpromosyontalepgor_Result">
+    <Property Type="Int32" Name="pid" Nullable="false" />
+    <Property Type="String" Name="bid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="urunAd" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="urunTip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="durum" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="talepTarihi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="gonderilmeTarihi" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="musteriyorumgetir_Result">
+    <Property Type="String" Name="Resim" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="adSoyad" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="arac" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="aracbilgi" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="tarih" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="yorum" Nullable="true" MaxLength="350" />
+  </ComplexType>
+  <ComplexType Name="musteriyorumgetir2_Result">
+    <Property Type="String" Name="Resim" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="adSoyad" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="arac" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="aracbilgi" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="tarih" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="markaID" Nullable="true" />
+    <Property Type="String" Name="modelID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="yorum" Nullable="true" MaxLength="350" />
+  </ComplexType>
+  <ComplexType Name="musteriyorumgetir3_Result">
+    <Property Type="String" Name="Resim" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="adSoyad" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="arac" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="aracbilgi" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="tarih" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="markaID" Nullable="true" />
+    <Property Type="String" Name="modelID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="yorum" Nullable="true" MaxLength="350" />
+    <Property Type="String" Name="resimm" Nullable="true" MaxLength="540" />
+  </ComplexType>
+  <ComplexType Name="promosyontalepgor_Result">
+    <Property Type="String" Name="bayiAdi" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="pid" Nullable="false" />
+    <Property Type="String" Name="bid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="urunAd" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="urunTip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="durum" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="talepTarihi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="gonderilmeTarihi" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="promosyonuruntipinegoregetir_Result">
+    <Property Type="Int32" Name="pid" Nullable="false" />
+    <Property Type="String" Name="bid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="urunAd" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="urunTip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="durum" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="talepTarihi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="gonderilmeTarihi" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="promosyonuruntipinegoregetir2_Result">
+    <Property Type="Int32" Name="pid" Nullable="false" />
+    <Property Type="String" Name="bid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="urunAd" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="urunTip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="durum" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="talepTarihi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="gonderilmeTarihi" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

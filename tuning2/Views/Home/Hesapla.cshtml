@@ -1,0 +1,39 @@
+﻿@model tuning.Models.ArabaMotor
+@{
+    ViewBag.Title = "Hesapla";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var beygirfark = Model.YeniBeygir - Model.OrjinalBeygir;
+    var gucfark = Model.YeniTork - Model.OrjinalTork;
+}
+
+<hr /><hr />
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">@ViewBag.marka</th>
+            <th scope="col">Orijinal</th>
+            <th scope="col">Chip Tuning Sonrası</th>
+            <th scope="col">Fark</th>
+            <th scope="col">Yakıt Tasarrufu</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" style="font-size:large;">Güç (HP)</th>
+            <td>@Model.OrjinalTork</td>
+            <td>@Model.YeniTork</td>
+            <td>@beygirfark</td>
+            <td rowspan="2">Yakıt eknomisi verileri araç tipine göre %8 ile %20 oranında değişiklik göstermektedir.</td>
+        </tr>
+        <tr>
+            <th scope="row" style="font-size:large;">Tork (NM)</th>
+            <td>@Model.OrjinalTork</td>
+            <td>@Model.YeniTork</td>
+            <td>@gucfark</td>
+
+        </tr>
+
+    </tbody>
+</table>
+

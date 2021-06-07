@@ -1,0 +1,175 @@
+﻿@model tuning.ViewModels.HizmetModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hizmetleri Düzenleme</h2>
+
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BenzinChip)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.BenzinChip)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.baslik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.yazi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.resim)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditBenzinChip", new { id = item.id }, new { @class = "btn btn-success" })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Box)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Box)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.baslik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.yazi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.resim)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "EditBox", new { id = item.id }, new { @class = "btn btn-success" })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ChipYazilim)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.ChipYazilim)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.baslik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.yazi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.resim)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "EditChip", new { id = item.id }, new { @class = "btn btn-success" })
+
+                </td>
+
+            </tr>
+        }
+
+    </table>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedal)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Pedal)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.baslik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.yazi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.resim)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "EditPedal", new { id = item.id }, new { @class = "btn btn-success" })
+
+                </td>
+
+            </tr>
+        }
+
+    </table>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tork)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Tork)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.baslik)
+                </td>
+                <td class="w-auto">
+                    @Html.DisplayFor(modelItem => item.yazi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.resim)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "EditTork", new { id = item.id }, new { @class = "btn btn-success" })
+
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>

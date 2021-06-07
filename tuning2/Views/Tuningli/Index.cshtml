@@ -1,0 +1,86 @@
+﻿@model IEnumerable<tuning.Models.tuningliaraclar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    <h2>Index</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.marka)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.orjbeygir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.orjtork)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kbeygir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ktork)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.resim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.yolu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.yakit)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.marka)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.orjbeygir)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.orjtork)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.kbeygir)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ktork)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.resim)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.yolu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.yakit)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-secondary" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

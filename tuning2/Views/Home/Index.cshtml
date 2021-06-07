@@ -1,0 +1,328 @@
+﻿@model tuning.ViewModels.HomeModel  
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="~/Backend-Challenge/FrontEnd/img/favicon.png" type="image/png">
+    <title>Hp Chip Tuning │ North Cyprus </title>
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/icomoon-icon/style.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/themify-icon/themify-icons.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/datetimepicker/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/slick/slick.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/slick/slick-theme.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/popup/magnific-popup.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/style.css">
+    <link rel="stylesheet" href="~/Backend-Challenge/FrontEnd/css/responsive.css">
+</head>
+
+
+<body data-scroll-animation="true" class="luxuary_bg">
+
+    <div class="preloader">
+        <div class="main-loader">
+            <span class="loader1"></span>
+            <span class="loader2"></span>
+            <span class="loader3"></span>
+        </div>
+    </div>
+
+    @Html.Partial("_header")
+
+
+    <section class="main_slider_area luxuary_slider_area">
+        <div class="main_slider luxuary_slider">
+
+            @foreach (var item in Model.Sliders)
+            {
+                <div class="slider_item">
+                    <div class="image_overlay" style="background: url(/Backend-Challenge/FrontEnd/img/home-slider/@item.resim2) no-repeat;"></div>
+                    <div class="container">
+                        <div class="slider_text">
+                            <h3 data-animation="fadeInUp" data-delay="0.7s">@item.baslik</h3>
+                            <h2 data-animation="fadeInLeft" data-delay="0.9s">@item.yazi</h2>
+                            <h5 data-animation="fadeInUp" data-delay="1.1s">@item.resim1</h5>
+                            <a href="#"><p data-animation="fadeInLeft" data-delay="1.5s">Bilgi Al</p></a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+        <div class="slider_nav slider_nav_four">
+            <i class="arrow_left ti-angle-left"></i>
+            <i class="arrow_right ti-angle-right"></i>
+        </div>
+        <div class="luxuary_details di-none">
+            <div class="luxuary_d_item video_luxuary wow animated fadeInRight" data-wow-delay="0.2s">
+                <div class="luxuary_video_area">
+                    <div class="car_video">
+                        <img class="img-fluid" src="~/Backend-Challenge/FrontEnd/img/small-video.jpg" alt="">
+                        <a class="play_btn popup-youtube" href="https://www.youtube.com/watch?v=6tUWYXe9qbY"><i class="icon-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="market_place_area px-50 mb-50">
+        <div class="container">
+            <div class="row market_inner">
+                <div class="col-lg-5">
+                    <div class="taxi_slider_text">
+                        <div class="container">
+                            <div class="row">
+                                <div class="taxi_s_form">
+                                    <div class="slider_form_title">
+                                        <h2> Araç Güç<span> Hesaplama</span></h2>
+                                    </div>
+                                    @using (Html.BeginForm("Hesapla", "Home", FormMethod.Post, new { @class = "row contact_form" }))
+                                    {
+                                        
+                                        <div class="form-group col-md-12">
+                                            <select class="nice_select passengers text-black" name="marka">
+                                                <option>Marka Seçiniz</option>
+                                                @foreach (var item in Model.Markalar)
+                                                {
+                                                    <option value="@item.MarkaAdi">@item.MarkaAdi</option>
+
+                                                }
+
+
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-12">
+                                            <select class="nice_select passengers text-black" name="model">
+                                                <option>Model Seçiniz</option>
+                                                @foreach (var item in Model.Modeller)
+                                                {
+                                                    <option value="@item.Id">@item.ModelAdi</option>
+                                                }
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-12">
+                                            <select class="nice_select passengers text-black" name="yil">
+                                                <option>Yıl Seçiniz</option>
+                                                @foreach (var item in Model.Yillar)
+                                                {
+                                                    <option value="@item.ID">@item.Adi</option>
+                                                }
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-12">
+                                            <select class="nice_select passengers text-black" name="yakit">
+                                                <option>Yakıt Tipi Seçiniz</option>
+
+                                                <option value="1">Benzin</option>
+                                                <option value="2">Dizel</option>
+
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-12">
+                                            <select class="nice_select passengers text-black" name="motoradi">
+                                                <option>Motor Seçiniz</option>
+                                                @foreach (var item in Model.Motorlar)
+                                                {
+                                                    <option value="@item.MotorAdi">@item.MotorAdi</option>
+                                                }
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-12">
+                                            <button type="submit" value="submit" class="btn submit_btn yellow form-control">
+                                                GÜÇ
+                                                HESAPLA
+                                            </button>
+                                        </div>
+                                        
+                                    }
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="market_text pl-40 ">
+                        <h3 class="s-mt-45 small-mt-45">
+                            <img src="~/Backend-Challenge/FrontEnd/img/icon/flag.png" alt="">Neden<span> Hp Chip Tuning ?</span>
+                        </h3>
+                        <div class="row maket_item_inner">
+                            <div class="col-sm-6">
+                                <div class="media">
+                                    <div class="d-flex">
+                                        <img src="~/Backend-Challenge/FrontEnd/img/icon/turbo.png" alt="" class="icon-width">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Maksimum Güç ve Tork</h4>
+                                        <p class="f-size-14 f-s-14">
+                                            Yazılım ile aracınızın sınırlarını zorlamadan maksimum güç ve torkuna
+                                            kavuşturarak performansını arttırıyoruz.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="media">
+                                    <div class="d-flex">
+                                        <img src="~/Backend-Challenge/FrontEnd/img/icon/dollar-coin.png" alt="" class="icon-width2">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Düşük Yakıt Tüketimi</h4>
+                                        <p class="f-size-14 f-s-14">
+                                            Aracınızın performansını arttırırken yakıt tüketiminide azaltarak sizlere
+                                            tasarruf imkanı sağlıyoruz.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="media">
+                                    <div class="d-flex">
+                                        <img src="~/Backend-Challenge/FrontEnd/img/icon/car-insurance.png" alt="" class="icon-width">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>DPF & EGR Yazılım</h4>
+                                        <p class="f-size-14 f-s-14">
+                                            Geliştirdiğimiz yazılımlar ile DPF ve EGR gibi araçta oluşabilecek sorunlarına
+                                            çözümler üretiyoruz.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="media">
+                                    <div class="d-flex">
+                                        <img src="~/Backend-Challenge/FrontEnd/img/icon/tachometer.png" alt="" class="icon-width">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Hız Limiti Değişikliği</h4>
+                                        <p class="f-size-14 f-s-14">
+                                            Yazılımlarımız ile aracınızın fabrika değerlerini arttırarak hız limitlerinde
+                                            artış sağlıyoruz.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="media">
+                                    <div class="d-flex">
+                                        <img src="~/Backend-Challenge/FrontEnd/img/icon/badge.png" alt="" class="icon-width2 ">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>3 Yıl Garanti</h4>
+                                        <p class="f-size-14 f-s-14">
+                                            3 yıl veya 100.000 km ye kadar orijinale dönme,
+                                            güncelleme, servis giriş çıkışları gibi seçenekler sunuyoruz.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="media">
+                                    <div class="d-flex">
+                                        <img src="~/Backend-Challenge/FrontEnd/img/icon/team.png" alt="" class="icon-width">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4>Profesyonel Ekip</h4>
+                                        <p class="f-size-14 f-s-14">Sektörde kendini kanıtlamış bir firma olarak , yazılımları her araca özel olarak yaparak performansını arttırıyoruz.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature_car_area">
+        <div class="container">
+            <div class="text-center single_dubble_title flag_title white slider_form_title">
+                <h2 class="wow animated fadeInUp" data-wow-delay="0.2s">
+                    Yazılım Uygulanan<span class="text-main"> Araçlar</span>
+                </h2>
+            </div>
+           
+            <div class="f_car_slider_inner">
+                <div class=" owl-carousel wow animated fadeIn" data-wow-delay="0.2s" data-dots="false">
+                    @foreach (var item in Model.Tuningliaraclars)
+	                {
+                    <div class="item">
+                        <div class="l_collection_item bus_item per">
+                            <div class="bus_img">
+                                <a href="#">
+                                    <img class="img-fluid"
+                                         src="~/Backend-Challenge/FrontEnd/img/vehicle-tunning/@item.resim"
+                                         alt="">
+                                </a>
+                            </div>
+                            <div class="bus_body">
+                                <h3>STG 1</h3>
+                                <a href="#"><h4>@item.marka</h4></a>
+                                <p>@item.model</p>
+                            </div>
+                            <div class="bus_footer">
+                                <a href="#">Orjinal: </a>
+                                <a href="#"><i class="icon-engine"></i> @item.orjbeygir hp</a>
+                                <a href="#"><i class="icon-gear1"></i> @item.orjtork nm</a>
+
+                            </div>
+                            <div class="bus_footer">
+                                <a href="#">Stage 1 :</a>
+                                <a href="#"><i class="icon-engine"></i> @item.kbeygir hp</a>
+                                <a href="#"><i class="icon-gear1"></i> @item.ktork nm</a>
+
+                            </div>
+                        </div>
+                    </div>
+	                }
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @Html.Partial("_footer")
+
+
+    <script src="~/Backend-Challenge/FrontEnd/js/jquery-3.4.1.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/popper.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/bootstrap.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/datetimepicker/moment.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/datetimepicker/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/slick/slick.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/counter-up/jquery.counterup.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/vendors/animate-css/wow.min.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/theme-dist.js"></script>
+    <script src="~/Backend-Challenge/FrontEnd/js/main.js"></script>
+
+
+</body>
+</html>
+
+
+
